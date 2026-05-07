@@ -1,0 +1,41 @@
+% !TEX root = mythesis.tex
+
+%==============================================================================
+\chapter{Introduction}
+\label{sec:intro}
+%==============================================================================
+
+Radar (\emph{Ra}dio \emph{d}etecting \emph{a}nd \emph{r}anging) devices have a long history in operational use. Even though being already discovered before, their development and research became of huge interest during World War II for detecting aeroplanes. It is said, that radar operators noticed in that time the echoing properties of weather phenomena, which was further investigated because of concerns about effects on aircraft detection~\cite{doviak_doppler_1993}.
+After war, this effort continued with extensive research and the eventual incorporation of radar devices for weather observation by weather services around the world.
+
+Because of their ability to detect and observe weather events in three dimensions and in high spatio-temporal resolution, they play a critical role in the detection of hazards, classification and quantification of precipitation, and short-term forecasting~\cite{zhangWeatherPola}.
+For instance, modern radars used by weather services have spatial resolutions
+on the order of at least $\SI{1}{\kilo\metre} \times \SI{1}{\kilo\metre}$ with ranges up to approx.\ \SI{200}{\kilo\metre} and temporal coverage of five minutes, making it possible to observe the evolution of storms at far ranges and issue warnings before e.\ g.\ disastrous flooding and potentially life-threatening weather situations.
+
+First research about use of dual-polarisation started in the early 1960s and it was later suggested by \textcite{seliga1976potential} to improve radar-based quantitative precipitation estimation (QPE) by measuring the difference between reflectivity in horizontal and vertical polarisation. An often used radar variable is for instance horizontal reflectivity $Z_\text{H}$ (often given in logarithmic unit \si{\decibel Z}), which gives information about e.\ g.\ number concentration, density and water content of particles in the atmosphere. 
+Using dual-polarisation provides then a wide range of new observable radar variables, one being the differential reflectivity \zdr~$(\si{\decibel})$, which is the received power ratio between horizontal and vertical polarisation.
+This new variable expands the conventional reflectivity by a vertical factor and hence additionally yields a more in-depth view of hydrometeors (precipitation particles), from which, for instance, size, shape and microphysical state, like their phase, can be derived. 
+Spherical hydrometeors (e.\ g.\ small raindrops) lead to a $Z_\text{DR} \approx \SI{0}{\decibel}$, whereas more oblate shaped ones lead to an increased differential reflectivity by a few \si{\decibel}.
+
+One observed signature connected to differential reflectivity are $Z_\text{DR}$-columns, which are an upward extension of sometimes several kilometres of positive differential reflectivity above the ambient \SI{0}{\degreeCelsius} level.
+It was investigated, that \zdr-column locations and intensities coincide with updraft positions and velocities~(e.\ g., \textcite{bringiInSituZDR, loneyInSituZDR}). 
+
+Heavy rainfall in conjunction with phenomena like flash flooding, hail and rainstorms, can have disastrous scales with potential loss of life and huge material damage. For flash flooding, rainfall intensity, duration and location is the key element~\cite{leon2016convective}. A main challenge for prediction is the rapid response time of catchments, which can be sometimes as short as \SI{10}{\minute}, so that expansion of lead times by a few minutes could improve short term forecasts and allow the earlier issuing of warnings~\cite{adachi2013detection}.
+
+Exploiting radar polarimetry and especially using \zdr-columns for vertical structure analysis of cells could provide such improvement of lead times or could help to predict the potential storm's severity.
+\textcite{RadarDerivedStructuralandPrecipitationCharacteristicsofZDRColumnswithinWarmSeasonConvectionovertheUnitedKingdom} investigated correlations between precipitation and \zdr-columns. They confirmed that cells containing \zdr-column signatures consistently produced the largest estimated rainfall rates, without evaluation of a possible lead time. Additionally, \textcite{adachi2013detection} analysed \zdr-column associations with rainfall enhancement and found an onset of forming \zdr-columns of 10 minutes before heavy ground precipitation was detected.
+Other studies could also show correlations between an intensification of $Z_\text{DR}$-column signatures and ground hail occurrence with time lags of approximately 15 to 20 minutes (e.\ g.\ \textcite{picca2010zdr, kumijan2014}). It seems therefore promising to further investigate \zdr-column properties, as for example maximum height and volume, in terms of possible rainfall enhancements.
+
+In doing so, this thesis will focus on the following research questions:
+\begin{enumerate}
+	\item Do \zdr-column attributes contribute to rainfall rates and are correlations quantifiable?
+	\item What is the time lag between an enhancement of \zdr-column attributes and increased rainfall and is there a dedicated region of impact?
+	\item Are \zdr-column signatures beneficial for improvement of nowcasting?
+\end{enumerate}
+
+Overall, the thesis is divided into five broad chapters. First, in Chapter~\ref{sec:theory}, the theoretical foundations are laid and, for example, a deeper understanding of radar variables and \zdr-column signature is presented. Then, in Chapter~\ref{sec:data}, the data used for the analysis is introduced and a brief overview of the analysed event is given. Chapter~\ref{sec:method} then explains the method and algorithms used before presenting the results in Chapter~\ref{sec:results}. Finally, Chapter~\ref{sec:discussion} gives a summary of the obtained results and their limitations, and also discusses possible further directions.
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mythesis"
+%%% End: 

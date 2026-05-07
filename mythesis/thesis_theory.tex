@@ -1,0 +1,139 @@
+% !TEX root = mythesis.tex
+
+%==============================================================================
+\chapter{Theory on Radar Meteorology}
+\label{sec:theory}
+%==============================================================================
+In this chapter a brief introduction into radar meteorology will be presented, providing all necessary theory for this thesis. First, the functionality and specifics of weather radars is explained, followed by a section about (polarimetric-) radar variables. After that, a prominent radar signature, the \zdr-columns will be presented, to introduce lastly nowcasting methods, so that the possible improvement of weather forecasts through making use of \zdr-columns is well underlined and motivated.
+
+\section{Weather radars}
+\label{sec:radars}
+Weather radars are sending and receiving pulsed electromagnetic waves in order to observe atmospheric weather events. They are constituted by three main components, which are the transmitter, antenna and receiver.
+
+The transmitter produces wave pulses with durations on the order of microseconds, which are conducted by a waveguide to a parabolic antenna, which focuses the waves into a narrow beam~\cite{yau1996short}. These beams will propagate through air, intercepting with particles along the way, eventually scattering some of the energy. 
+Part of the energy being backscattered towards the antenna and being sufficiently large will then be detected by the receiver~\cite{yau1996short}.
+Distance to scatterers (e.\ g.\ hydrometeors, but also non-meteorological targets as birds, insects, etc.) can be calculated by measuring the timespan between transmission and reception, whereby direction is obtained from antenna azimuth and elevation when the signal is detected~\cite{yau1996short, fukao2014radar}.
+
+Weather radars are using wavelengths in the microwave range with $\SI{1}{\centi\meter} < \lambda < \SI{10}{\centi\meter}$, which is approximately 10 times the particle's size, so that Rayleigh scattering occurs mostly, non-Rayleigh scatterers are bigger in comparison to the wavelength and can be, for example, very large hail.
+Mostly, operational weather radars are using S-, C- or X-band (\SI{10}{\centi\metre}, \SI{5}{\centi\metre} and \SI{3}{\centi\metre} wavelength respectively), each with unique pro and cons, e.\ g.\ shorter wavelengths are more sensitive to smaller particles, but the signal is faster attenuated~\cite{doviak_doppler_1993}.
+
+Radar resolution is limited by some beam characteristics.
+Usually, radars have a beam-width of 1°, as determined by antennas curvature and used wavelengths, thus air volume taken up at far distances is much greater. Additionally the atmosphere's refractive index is height-dependent, which is why the beams have an approximately circular curvature with radii slightly greater than the earth's radius~\cite[p. 18]{doviak_doppler_1993}.
+
+For scanning the whole three-dimensional space, there are various methods available. The most basic and widely used one is a volume scan, which is defined as a 360° azimuthal rotation of the antenna, repeatedly for different elevations. Another important method is the range height indicator (RHI) scan, which is a vertical cross-section accomplished by scanning vertically for a fixed azimuth~\cite[p. 275]{fukao2014radar}. A detailed description of scanning method implemented by the radar system used in this thesis will be given in Section \ref{sec:volumecoverage}.
+
+Since in the beginning conventional weather radars were only sending and receiving in horizontal polarisation, nowadays most radar networks use polarimetric radars, making use of both horizontal and vertical polarisation. This yields some additional insight into shape and orientation of hydrometeors, because the signal at horizontal polarisation is mainly affected by horizontal dimension and the vertical signal by vertical particle extent.
+
+As radar echoes are not all necessarily meteorological, some quality control measurements need to be applied. One spurious echo source can be any non-meteorological object in the atmosphere, such as aeroplane, birds, insects, mountains, ships and buildings. Other sources can be special conditions of the atmosphere, where different refractive indices cause a bending to the ground and produce heavy echoes. Apart from that, attenuation from heavy thunderstorms, with for example hail regions, will lead to an underestimation of precipitation located behind these regions~\cite{radarqualitycontrol}.
+
+
+\section{Radar variables}
+From evaluation of backscattered and sent electromagnetic waves, several radar products can be derived. In this section, an overview over the most important ones, with emphasis on those from interest for this thesis, will be introduced. For a more sophisticated overview of such variables it is referred to \textcite{doviak_doppler_1993, Bringi2001, zhangWeatherPola, kumjian2013principles}.
+
+\subsection{Reflectivity}
+The received power $P_\text{R}$ from backscattered electromagnetic waves, is determined by intrinsic radar parameters, the particle range and two particle-dependent factors. One of these is the dielectric constant and the other is the reflectivity factor which is defined by:
+\begin{equation}
+z = \sum_V D^6 = \int_{0}^{\infty} N(D)D^6 \mathrm{d}D \quad \text{,}
+\end{equation}
+where $D$ are the drop diameters and $N(D)$ is the drop size distribution~\cite[p. 190]{yau1996short}. This factor is highly dependent on the number of scatterers and their sizes, thus $z$ features values with huge spans in magnitudes. Because of that, this reflectivity factor is usually given in a logarithmic scale, normalised to a standard drop size of \SI{1}{\milli\metre} filling a unit volume of $\SI{1}{\metre^3}$ and has units of \si{\decibel Z}~\cite{meischner2005weather}:
+
+\begin{equation}
+\label{eq:reflectivity}
+Z = 10 \log_{10} \dfrac{z}{\SI{1}{\milli\metre^6 \metre^{-3}}} \quad \text{,}
+\end{equation}
+a subscripted character stands for reflectivity received in either horizontal or vertical polarisation, $Z_\text{H}$ and $Z_\text{V}$ respectively. 
+Using multiple polarisations gives insight into particle properties, as some of the backscattered energy retains their polarisation.
+Therefore, $Z_\text{H}$ gives introspect into horizontal extent of hydrometeors and $Z_\text{V}$ into vertical. A comparison yields useful information and some new radar variables.
+
+Figure \ref{fig:ppi} shows a Plan Position Indicator (short PPI) of $Z_\text{H}$, as captured by the Essen radar operated by the German national weather service \emph{(DWD, Deutscher Wetter Dienst)} on the 4 June 2016 at 14:00. 
+PPIs show the radar signals directly as a two-dimensional image, thus representing a map-like observation of echoes with radar coordinates like range and angle centred around the radar station.  
+High reflectivity means, either having bigger particles or high densities in the area of investigation and is related to the precipitation rate $R$.
+As the height of radar beams is ascending with distance to the radar, observed reflectivity at far ranges is more difficult to compare to reflectivity nearby. 
+Figure \ref{fig:ppi} displays convective cells moving over Bonn and surroundings, with reflectivity reaching up to \SI{60}{\decibel Z}, which equals very intense rainfall or hail.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth, trim={1.5cm 4.2cm 1.5cm 4.5cm}, clip]{14:00-radar.png}
+	\caption[PPI of $Z_\text{H}$ observed from the Essen radar.]{PPI displaying $Z_\text{H}$ as observed from Essen radar on the 04/06/2016 at 14:00.}
+	\label{fig:ppi}
+\end{figure}
+
+\subsection{Differential reflectivity \texorpdfstring{$Z_\text{DR}$}{ZDR}}
+As mentioned, dual-polarisation radars present some profound details of scattered particles, such as size, shape and orientation, introducing a variety of new (polarimetric-) variables.
+One of these, the differential reflectivity, is the difference between $Z_\text{H}$ and $Z_\text{V}$, which can also be thought of as the logarithm from the ratio of horizontal and vertical reflectivity given in linear units:
+
+\begin{equation*}
+Z_\text{DR} = Z_\text{H} - Z_\text{V} = 10 \log_{10} \dfrac{z_\text{h}}{z_\text{v}} \quad \text{.}
+\end{equation*}
+This relation is a measure of the axis ratio and size of precipitation particles, indicating a greater extent in horizontal orientation for $Z_\text{DR} > 0$~\cite{strakaHydrometeorClassification}.
+This is for example the case for bigger raindrops, as they become more oblate with larger sizes. $Z_\text{DR} \approx \SI{0}{\decibel}$ indicates spherical particles, but can also imply randomly orientated or tumbling hydrometeors, such as hail~\cite[p. 64]{Bringi2001}.
+Negative values imply vertically-orientated particles, which can be for example ice needles or can be caused by resonance effects~\cite{kumjian2013principles}. 
+Also, the dielectric constant of ice is smaller than for liquid water, therefore the liquid particles usually produce larger \zdr. This also applies for water coated hail, which can also produce high values of \zdr~\cite[p. 255]{doviak_doppler_1993}.
+
+\subsection{Differential propagation phase shift $\Phi_\text{DP}$ and specific differential phase $K_\text{DP}$}
+As electromagnetic waves propagate through space, they will perhaps encounter precipitation along the way. Scattering with those hydrometeors, the waves acquire some phase shift, which can be different between horizontal and vertical polarisation depending on the shape of particles. For example, nonspherical scatterers like oblate raindrops will influence horizontal-polarised waves more, because of their larger horizontal dimension. This means, that with increasing particle size and concentration $\Phi_\text{DP}$ will also get larger~\cite{kumjian2013principles}.
+
+Because the scattered radiation interacts again with all particles along the way back, often half the range derivative of differential phase shift, the specific differential phase $K_\text{DP}$, is taken~\cite{kumjian2013principles}.
+
+$K_\text{DP}$ is a phase measurement and as such not so affected by attenuation, thus it represents a variable of high interest for applications like attenuation correction or rainfall estimations. Nonetheless, it is difficult to obtain good estimates of $K_\text{DP}$ for example in light rain or in the presence of non-Rayleigh scatterers~\cite{kumjian2013principles}.
+
+\subsection{Specific attenuation $A$}
+As radar beams are scattering with hydrometeors, some of the energy will be absorbed or scattered diffusely so that it can't be detected by the radar device any more.
+A measure of this is the specific attenuation $A$, the amount of signal weakening per range, given in $\si{\decibel \kilo\metre^{-1}}$, which is provided for both horizontally and vertically polarised waves (thus $A_\text{H/V}$), as well as differential variable $A_\text{DP}$~\cite[p.~97]{ryzhkovRadarPolarim}.
+
+Specific attenuation is proportional to the rain rate, which makes it attractive for rainfall retrievals. However, estimation of $A$ is not a trivial task, because it can't be measured directly by radars, as they only detect the amount of energy backscattered and not that being absorbed or scattered in other directions.
+That is why several methods have been developed for this estimation, like for example relating the decrease in reflectivity caused by attenuation with $\Phi_\text{DP}$~\cite{bringiAttenuation}. 
+In contrast to radar reflectivity $Z$, specific attenuation is more directly related to rain rate and depending on the method used it may not be affected by radar miscalibration and blockage of radar beams~\cite{ryzhkovAttenuation}.
+
+\subsection{Co-polar correlation coefficient $\rho_\text{hv}$} % maybe
+The co-polar correlation coefficient $\rho_\text{hv}$ is a highly valuable statistical variable for the quality control of radar data. It is a measure of diversity in the signals at horizontal and vertical polarisation, contributed by each scatterer in the sampling volume~\cite{ryzhkovRadarPolarim, kumjian2013principles}. If there is large variety in type, shape or orientation of particles, $\rho_\text{hv}$ is decreased. This is also valid for non-meteorological echoes, because they usually are more variable compared to the more uniform precipitation. On the other hand, spherical hydrometeors produce $\rho_\text{hv} = 1$~\cite[p.~139]{ryzhkovRadarPolarim}.
+
+With that, low values of $\rho_\text{hv}$ can be used for detecting hail or mixed phase regions and also to filter non-meteorological echoes.
+
+\newpage
+\section{\zdr-columns}
+One observable radar signature are the so-called \zdr-columns. They are a narrow (some kilometres wide) vertical extent of differential reflectivity above the environmental $\SI{0}{\degreeCelsius}$ freezing level, sometimes reaching a couple kilometres of height above~\cite{kumijan2014}. Figure \ref{fig:rhi_zdr} displays a range height indicator (RHI) scan through a storm cell, presenting horizontal (left) and differential reflectivity (right). The additional information content of using polarimetric variable becomes obvious comparing the two. In this example, the RHI of \zdr~exhibits a prominent columnar structure at about \SI{75}{\kilo\metre} distance, reaching up some kilometres above the melting layer, which is at about \SI{3}{\kilo\metre} height.
+
+As described, positive values of \zdr~indicate oblate hydrometeors, such as large raindrops. Observing a \zdr-column therefore implies, that large raindrops have been lofted above the melting layer. 
+Various studies have investigated \zdr-column structure, microphysics and their forecasting abilities. In-situ measurements have suggested, that \zdr-columns are coincident with updrafts (for example \textcite{bringiInSituZDR, loneyInSituZDR}). This was approved by \zdr-column simulations (e.\ g.\ \textcite{kumijan2014, snyder, snyderZDRSimulations}) finding positive correlations between \zdr-column height and updraft speed.
+This implies the idea of using \zdr-column signature for forecasting, as intensification of column height or volume, and the corresponding updraft speed might portend intensification of a storm's severity. 
+
+\textcite{scharfenbergZDRApplication} introduced some practical applications of this signature.
+Additionally, e.\ g.\ \textcite{RadarDerivedStructuralandPrecipitationCharacteristicsofZDRColumnswithinWarmSeasonConvectionovertheUnitedKingdom, adachi2013detection} have conducted research on rain intensity and \zdr-columns. They found, that heavy precipitation rates were associated with \zdr-column presence and \textcite{adachi2013detection} discovered that this intensification occurred with a lead time of 10 minutes, whereby only two convective cells have been analysed in that study.
+
+Additionally, \textcite{picca2010zdr} first investigated \zdr-column signatures and increases in surface $Z_\text{H}$-ratio (as proxy for hail) and found positive correlations with lead times of preceding \zdr-column intensification by \SIrange{10}{30}{\minute}. \textcite{kumijan2014} validated in their spectral bin microphysical model correlations between \zdr-column heights and significant surface hail mass with lead times of approximately \SIrange{10}{15}{\minute}.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{rhi_zdr.png}
+	\caption[RHI displaying a \zdr-column.]{RHI displaying $Z_\text{H}$ (left) and $Z_\text{DR}$ (right) of a cell, showing an example of a \zdr-column. For each, values are colour coded in units of \si{\decibel Z} for $Z_\text{H}$ and \si{\decibel} for \zdr~(indicated by colour bars)~\cite[Fig.~1]{kumijan2014}.}
+	\label{fig:rhi_zdr}
+\end{figure}
+
+\section{Weather radar products: QPE and QPN}
+Radar measurements are fundamental for nowcasting, because severe weather (e.\ g.\ heavy precipitation and thunderstorms) is happening during short time periods and in small regional areas, therefore the high spatio-areal resolutions provided by weather radars are crucial for that task.
+Nowcasting is defined by the World Meteorological Organisation (WMO) as the current state of the atmosphere and forecasts of up to \SI{6}{\hour}~\cite[p. xi]{wang2017guidelines}.
+
+Prediction of especially smaller scale weather (e.g.\ flash flooding), is highly dependent on extrapolation of radar observations and their accuracy is limited by the precision of initial radar rainfall estimation and algorithms used for extrapolation.
+Thus improving near-real time radar-based rainfall estimates (\emph{quantitative precipitation estimations}) and their predictions for the next hours (\emph{quantitative precipitation nowcasting}) through the application of radar polarimetry is of key interest.
+
+
+\subsection{Quantitative Precipitation Estimation - QPE}
+QPE is a method of approximating the precipitation at a certain location by the use of radar measurements. Conventional radars only provide the radar reflectivity ($Z_\text{H}$) containing information about the rain rate ($R$), which is related with a power-law:
+\[
+	Z = \alpha R^\beta
+\]
+Since there is a huge variability in rain \emph{drop size distributions} (DSDs), the coefficient $\alpha$ and exponent $\beta$ also vary widely, depending on rain type, season and climatology, making approximations difficult~\cite[p.~194]{zhangWeatherPola}. \textcite{Rosenfeld2003} gave a complete review of different $Z$ -- $R$ relations.
+
+Using polarimetric radar variables was an early idea to improve QPE and provides some new relations. These are expected to be related in a power-law as well, so that for example $R(Z_\text{H}, Z_\text{DR}) = a Z_\text{H}^b Z_\text{DR}^c$, $R(K_\text{DP}) = a K_\text{DP}^b$ and $R(K_\text{DP}, Z_\text{DR}) = a K_\text{DP}^b Z_\text{DR}^c$~\cite[p.~195]{zhangWeatherPola}.
+
+\subsection{Quantitative Precipitation Nowcasting - QPN}
+In order to generate radar-based very short-term forecasting, \emph{quantitative precipitation nowcasting} algorithms have been developed. One frequently used method is based on the advection of rain fields observed by weather radar (QPE)~\cite{qpn_sprog}. For that, the estimated motion field is calculated from three consecutive QPE pictures, making use of an optical tracking method. Then, the last observed QPE field is extrapolated within a nowcasting period. The accuracy of such forecasts was often limited by the dynamic development of rain cells~\cite{qpn_sprog}.
+
+Another method is the so-called spectral prognosis (S-PROG) method, which is also advection-based, but exploits both spatial and dynamic scaling-dependent properties of rain fields~\cite{qpn_sprog}.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mythesis"
+%%% End: 

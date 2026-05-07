@@ -1,0 +1,232 @@
+% !TEX root = mythesis.tex
+
+%==============================================================================
+\chapter{Results}
+\label{sec:results}
+%==============================================================================
+Based on the event discussed in Chapter \ref{sec:data} and the methodology in \ref{sec:method}, the evaluation of \zdr-columns and associated enhancement in precipitation rate has been done. It was challenging that the observed cells were highly-dynamically developing and were allocated closely. Additionally, \zdr-columns are small-scale and highly dynamic radar signatures, so that algorithms and resolutions should be high, in order to obtain results with low uncertainty.
+However, given the volume coverage pattern from DWD and radar characteristics, the provided resolution is quite low. Synthetically constructed RHIs and the resulting skewness additionally limit this resolution. 
+
+With this restrictions in mind, the analysis is started with a more general evaluation of identified \zdr-columns and tracking abilities. Afterwards, the analysis of associated rainfall enhancement follows. For that, an overall analysis of precipitation from cells containing \zdr-columns is done, before reviewing more in depth the local and temporal characteristics of such.
+At last, a comparison of instantaneous radar estimates and nowcasting is obtained, investigating the possible improvement of \zdr-column signature for observation-based nowcasting.
+
+\section{Analysis of \zdr-column identification and tracking}
+The column identification algorithm was applied to all radar pictures at the event date from 10:00 till 20:00. 
+Figure \ref{fig:heights_040616} shows the distribution of all detected heights and \ref{fig:zdr_volumes} the volumes.
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{zdr_all_heights_histogram.png}
+		\caption{\zdr-column heights.}
+		\label{fig:heights_040616}
+	\end{subfigure}
+	
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{zdr_volumes_histogram.png}
+		\caption{\zdr-column volumes.}
+		\label{fig:zdr_volumes}
+	\end{subfigure}
+	\caption[Distribution of \zdr-column properties.]{Distributions of \zdr-column properties, detected by identification algorithm.}
+	\label{fig:zdr_properties}
+\end{figure}
+In general there are two accumulations of detected heights, one at around approximately $\SI{750}{\metre}$ and the other at around $\SI{1400}{\metre}$, whereas average height was approximately \SI{1200}{\metre}. Deepest cases extended up to over \SI{3}{\kilo\metre} and the lowest detected height was \SI{46}{\metre}. 
+The histogram of \zdr-column volumes are looking a bit different, since they don't seem to have such a high variability. On average one column's volume was approximately $\SI{10}{\kilo\metre^3}$.
+
+Tracking was performed for all identified columns at all time-steps indicated above. At first, the tracking quality is checked visually. Fig.~\ref{fig:tracks} shows tracks with first identification between 14:00 and 16:00 and living at least 20 minutes. Generally, the tracks don't seem to have jumps or mismatches. However, looking for example at column track \emph{478} and \emph{585}, it could possibly be that there are some dropped associations. One observed \zdr-track (id \emph{475}) is displayed in Fig.~\ref{fig:tracks}, showing the column's evolution inside the QPE-field.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.7\textwidth, trim={2cm, 2cm, 2cm, 2cm}, clip]{tracks_4.png}
+	\caption[Illustration of \zdr-column tracks.]{Tracks of \zdr-columns with first detection between 14:00 and 16:00. Only tracks with life-times of at least 20 minutes are shown. Numbers indicate the unique track id.}
+	\label{fig:tracks}
+\end{figure}
+
+Additionally, track life times are shown in Table \ref{tab:durability}. Striking is the number of tracks only living five minutes. This can indicate for instance dropped associations due to the tracking algorithm tuned to \emph{conservative} and will be discussed in Chapter \ref{sec:discussion}.
+
+Nevertheless, overall track quality is looking good enough for further evaluation and tracks with durabilities of five minutes will be excluded.
+
+\begin{table}[!htb]
+	\centering
+	\begin{tabular}{c|c}
+		Duration / min & Count \\
+		\hline
+		5   & 759 \\
+		10  & 156 \\
+		15  & 46  \\
+		20  & 25  \\
+		25  & 8  \\
+		30  & 10   \\
+		40  & 1   \\
+		45  & 1   \\
+		60  & 1   \\
+		65  & 1   \\
+	\end{tabular}
+	\caption{Analysis of \zdr-column life times, observed by tracking algorithm.}
+	\label{tab:durability}
+\end{table}
+
+\clearpage
+\section{Analysis of \zdr-column and rainfall properties}
+Now, enhancement of rainfall associated to \zdr-columns, both spatially and temporally, can be made. At first, the general impact on cells containing \zdr-columns is investigated. All precipitation intensities of cells with and without a columnar \zdr~signature have been compared with total fallen rainfall. The contribution to intensities is visualised in a cumulative distribution function (CDF) in Figure~\ref{fig:cdf_all}. 
+This distribution shows clearly, that highest rain intensities were associated to cells containing \zdr-columns, whereas lowest intensities belonged to cells not containing \zdr-columns. Worth mentioning is also the inverse proportionality of both distributions, which clearly seems to verify the assumption of higher overall rainfall associated to \zdr-columns. 
+
+Contribution to precipitation from intensities greater than $\SI{70}{\milli\metre\hour^{-1}}$ are not displayed, due to the lack of points with such high precipitation intensities (only \SI{0.01}{\percent} of all rainfall intensities exceeded this mark).
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{cdf_qpe.png}
+	\caption[CDF of all recorded cells.]{Cumulative distribution function (CDF) of precipitation intensities. Blue bars show values associated to cells containing \zdr-columns, in contrast to orange bars displaying contribution to overall rainfall intensities from non-\zdr-column bearing cells.}
+	\label{fig:cdf_all}
+\end{figure}
+
+As this is only a general look on enhancement in rainfall, this was then investigated further for more local attributes. For analysis of the impact area, different radii were established around \zdr-columns. The $95^\text{th}$ rainfall percentiles inside these circles have been compared with each other, and also with rain percentiles located outside. 
+The challenge to this lies in the variability of cells itself, for example comparison of values inside and outside of a circle is difficult, because this is cell-size-dependent, e.\~g.\ bigger cells will have more points located outside the circle and additionally could contain other \zdr-columns, leading to higher rainfall rates outside of the area of evaluation.
+However, a radius of two times $r_\text{zc}$ (defined in Section~\ref{sec:tracker}) seemed to produce best results.
+
+With this radius, all precipitation intensities inside and outside the circle are evaluated similar to the general distribution above and for all cells independently.
+The results vary largely for the tracked \zdr-columns, due to the limitations, used method and also because \zdr-column and cell properties are not included in that evaluation. For instance, it could be assumed that the CDF of a not so prominent  \zdr-column won't lead to such enhanced precipitation rates.
+Therefore, it was decided to give a selection of more prominent columnar structures,
+which are following the overall distribution nicely, as analysed above.
+CDFs of that selection can be seen in Figure~\ref{fig:cdf_cells}. Again, higher precipitation intensities occurred less, which lead to spurious contributions, as seen in Fig.~\ref{fig:cdf_101} (for rainfall rates equal to or greater than $\SI{50}{\milli\metre\hour^{-1}}$).
+
+Generally speaking, this is certainly supporting the hypothesis of enhanced precipitation in the vicinity of \zdr-columns in a circle of two times the column's radius.
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cdf_82.png}
+		\caption{Track \emph{82}.}
+		\label{fig:cdf_82}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cdf_101.png}
+		\caption{Track \emph{101}.}
+		\label{fig:cdf_101}
+	\end{subfigure}
+	
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cdf_475.png}
+		\caption{Track \emph{475}.}
+		\label{fig:cdf_475}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{cdf_723.png}
+		\caption{Track \emph{723}.}
+		\label{fig:cdf_723}
+	\end{subfigure}	
+	\caption{CDFs of four cells containing \zdr-columns.}
+	\label{fig:cdf_cells}
+\end{figure}
+
+In a next step the temporal analysis of \zdr-column and precipitation properties was done inside the investigated column's impact area. The idea was, that precipitation rates follow the curves of \zdr-column properties with a certain time lag and that the rates of each are correlated, meaning that a higher \zdr-column property would lead to enhanced rainfall intensity after a certain time. 
+For this, \zdr-column maximum height and volume will be evaluated at each time-step. As described before, the centroid locations are projected into subsequent time-steps to address the possibility of enhanced rainfall after the last column's detection. 
+However, this brings some extra uncertainty, because the development of cells is completely excluded in that approach. For instance, the cells can grow or decay, merge or split over time. As \zdr-columns are usually located at cell edges, they are affected strongly by this rapid development. 
+It was tried to limit the possible contamination of wrongly associated rainfall informations by a simple approach. Distance of projected centroid locations to QPE-cells were calculated and only when values were lower than the \zdr-columns radii, rainfall rates were matched. However, the chance of possible spurious associations is still quite present, especially for the given case with the closely located rapidly developing cells.
+
+Therefore a complete statistical analysis of lead times was not possible.
+Nonetheless, time-series of the four previously analysed \zdr-columns are presented and discussed qualitatively, to give a feeling on possible lead times and correlations.
+Fig.~\ref{fig:timeseries_82} and \ref{fig:timeseries_rest} display \zdr-column properties in comparison to $95^\text{th}$ rainfall intensity and $Z_\text{H}$ percentiles.
+In \ref{fig:timeseries_82} an additionally comparison of the two analysed column properties, \zdr-column maximum height and volume, is presented.
+Both seem to be following each other in a similar manner. Nevertheless, column volumes seem to illustrate smaller-scale dynamics finer, thus plots of volumes and rainfall rates are illustrated in Fig.~\ref{fig:timeseries_rest}, although plots with heights can be found in \ref{fig:timeseries_rest_height}.
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[b]{0.8\textwidth}
+		\includegraphics[width=1\textwidth]{zdr-c_vol_qpe_82.png}
+		\caption{Time series with \zdr-column's volume.}
+		\label{fig:zdr-height_82}
+	\end{subfigure}
+
+	\begin{subfigure}[b]{0.8\textwidth}
+		\includegraphics[width=\textwidth]{zdr-c_height_qpe_82.png}
+		\caption{Time series with \zdr-column's maximum height.}
+		\label{fig:zdr-vol_82}
+	\end{subfigure}
+	\caption[Time-series of \zdr-column properties and rainfall.]{\zdr-column properties, $95^\text{th}$ percentile of rainfall intensity and horizontal reflectivity associated to \zdr-track \emph{82}.}
+	\label{fig:timeseries_82}
+\end{figure}
+Looking at the plots in the first three Figures, precipitation rates indeed seem to follow a spiking \zdr-column's volume (or height) with individual lead times. For instance, \zdr-track \emph{82} seems to be detected already with a quite prominent intensity, so that it could be assumed, that the column was not detected in the growing process, or that association has been dropped before. With the assumption that the spike's peak is at the time of detection, this would support the hypothesis of a 10 minute time lag. The same can be said for track \emph{101}, which shows values of \zdr-columns and rainfall intensities spiking with almost the same amplitudes with a time lag of 10 minutes again.
+However, \zdr-track \emph{475} seems to have a time lag of 5 minutes and track \emph{723} doesn't show sharply defined spikes in rainfall rate, thereby not
+supporting the hypothesis of a lagged rain intensification associated to \zdr-column enhancement. Anyhow, an increased overall intensity during the time of \zdr-track observation can still be seen.
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[b]{0.9\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{zdr-c_vol_qpe_101.png}
+		\caption{\zdr-track \emph{101}.}
+		\label{fig:zdr-vol_101}
+	\end{subfigure}	
+
+	\begin{subfigure}[b]{0.9\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{zdr-c_vol_qpe_475.png}
+		\caption{\zdr-track 475.}
+		\label{fig:zdr-vol_475}
+	\end{subfigure}	
+
+	\begin{subfigure}[b]{0.9\textwidth}
+		\centering
+		\includegraphics[width=1\textwidth]{zdr-c_vol_qpe_723.png}
+		\caption{\zdr-track 723.}
+		\label{fig:zdr_vol_723}
+	\end{subfigure}	
+	\caption{Like Fig.~\ref{fig:zdr-vol_82}, but for track \emph{101}, \emph{475} and \emph{723}.}
+	\label{fig:timeseries_rest}
+\end{figure}
+
+In a next step, it was tried to correlate \zdr-column properties with resulting rainfall intensities by evaluating \emph{all} column tracks (except \SI{5}{\minute} living ones). 
+For that, the $95^\text{th}$ percentiles of \zdr-column height, volume and rainfall rate was calculated for each track. These values were then grouped by the corresponding height or volume (for example, height was grouped in steps of 100, with ranges between \numrange{450}{549}, \numrange{550}{649}, etc.). 
+In each of these groups, the average rainfall intensity was calculated, which is displayed in Fig.~\ref{fig:corr_height} and \ref{fig:corr_vol}.
+A positive correlation can be seen in both plots, producing for both variables similar slopes and intercepts from the linear regression. 
+The coloured areas indicate spans between maximum and minimum precipitation rates associated to the corresponding height or volume, showing regions of high uncertainty where accumulations of each variable have been identified before (see Fig.~\ref{fig:heights_040616} and \ref{fig:zdr_volumes}). 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{corr_height_rain_percentile.png}
+	\caption{Correlation of \zdr-column height and rainfall intensity.}
+	\label{fig:corr_height}
+\end{figure}
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.9\textwidth]{corr_vol_rain_percentile.png}
+	\caption{Correlation of \zdr-column volume and rainfall intensity.}
+	\label{fig:corr_vol}
+\end{figure}
+
+\clearpage
+\subsection{Improvement of nowcasting}
+For analysis of nowcasting improvement through \zdr-column properties, QPN is initiated at 14:00 and then compared with QPE in every time-step up to two hours of nowcasting time. This is done in regions of two times the radius $r_\text{zc}$ and by taking the $95^\text{th}$ percentile inside the circles. For each \zdr-column, the ratio of so found percentile rain rates was then calculated. The mean of ratios for each time-step can be found in Figure~\ref{fig:qpe_qpn_percentile}. In addition, Fig.~\ref{fig:qpe_qpn_count} shows the number of detected QPE- and QPN-cells at positions of ZDR columns.
+
+\begin{figure}[!htb]
+	\centering
+	\begin{subfigure}[b]{0.8\textwidth}
+		\includegraphics[width=1\textwidth]{qpe_qpn_percentile_mean.png}
+		\caption{Mean ratios calculated of QPE and QPN in area of impact.}
+		\label{fig:qpe_qpn_percentile}
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.8\textwidth}
+		\includegraphics[width=1\textwidth]{qpe_qpn_count.png}
+		\caption{Number count of detected QPE- and QPN-cells at \zdr-column locations.}
+		\label{fig:qpe_qpn_count}
+	\end{subfigure}	
+	\caption[Comparison of QPE and QPN.]{Comparison of QPE and QPN for lead times up to two hours after first initiation of nowcasting at 14:00.}
+	\label{fig:qpe_qpn}
+\end{figure}
+As expected, the ratio was approximately one at initial nowcasting and increased over time. Surprisingly, the precipitation rate from nowcasting was on average already five minutes after initiation five times underestimated and after 20 minutes quality became quite poor. This is underlined by comparison of detected QPE and QPN data in Fig.~\ref{fig:qpe_qpn_count}, which exhibit that number count of QPN in regions of \zdr-columns was half in comparison with the QPE already ten minutes after initiation. More generally it can be said, that after 20 minutes, number count is already less than half in comparison with the real-time observation.
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mythesis"
+%%% End: 

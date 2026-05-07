@@ -1,0 +1,21 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'mythesis.blg'
+[103] biber:322> INFO - === So Jun 13, 2021, 20:30:00
+[122] Biber.pm:415> INFO - Reading 'mythesis.bcf'
+[221] Biber.pm:943> INFO - Found 37 citekeys in bib section 0
+[239] Biber.pm:4256> INFO - Processing section 0
+[239] Utils.pm:75> INFO - Globbing data source 'bib/thesis_refs.bib'
+[240] Utils.pm:91> INFO - Globbed data source 'bib/thesis_refs.bib' to bib/thesis_refs.bib
+[240] Utils.pm:75> INFO - Globbing data source 'bib/standard_refs-biber.bib'
+[240] Utils.pm:91> INFO - Globbed data source 'bib/standard_refs-biber.bib' to bib/standard_refs-biber.bib
+[256] Biber.pm:4455> INFO - Looking for bibtex format file 'bib/thesis_refs.bib' for section 0
+[260] bibtex.pm:1653> INFO - LaTeX decoding ...
+[346] bibtex.pm:1471> INFO - Found BibTeX data source 'bib/thesis_refs.bib'
+[467] Utils.pm:293> WARN - year field '01 Nov. 2018' in entry 'RadarDerivedStructuralandPrecipitationCharacteristicsofZDRColumnswithinWarmSeasonConvectionovertheUnitedKingdom' is not an integer - this will probably not sort properly.
+[711] UCollate.pm:68> INFO - Overriding locale 'en-UK' defaults 'variable = shifted' with 'variable = non-ignorable'
+[711] UCollate.pm:68> INFO - Overriding locale 'en-UK' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[711] Biber.pm:4084> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-UK'
+[712] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-UK'
+[742] bbl.pm:652> INFO - Writing 'mythesis.bbl' with encoding 'UTF-8'
+[774] bbl.pm:755> INFO - Output to mythesis.bbl
+[775] Biber.pm:128> INFO - WARNINGS: 1

@@ -1,0 +1,127 @@
+% !TEX root = mythesis.tex
+
+%==============================================================================
+\chapter{Data sets}
+\label{sec:data}
+%==============================================================================
+Radar data is used from the radar network of DWD, which operates a network of 17 C-band polarimetric Doppler radars.
+First, the scanning strategy of radar devices will be outlined, then the used QPE and QPN are introduced, before a brief description of the analysed event will be given.
+
+\section{Volume coverage pattern}
+\label{sec:volumecoverage}
+In Section~\ref{sec:radars} a brief introduction of radar scanning methods (volume coverage pattern) was mentioned, in this Section the method by herein used radar systems will be outlined.
+In general, DWD radars perform for several constant elevation angles a full azimuthal rotation, which is displayed in Fig.~\ref{fig:scanstrategy} (upper part). Each colour represents an elevation, for each the azimuthal rotation is performed.
+Radar location is in the lower left corner with beam propagation to the right. The temporal sampling pattern is displayed in the lower part of the Figure, which is repeated every five minutes.
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{weather_radar_scanning.png}
+	\caption{Radar-scan-strategy of DWD radar systems~\cite{scanstrategy}}
+	\label{fig:scanstrategy}
+\end{figure}
+
+The first scan is the so-called \emph{precipitation scan} with an orography following elevation (lowest possible position to follow the horizon line), which has a range of \SI{150}{\kilo\metre} and a range resolution of \SI{250}{\metre}.
+After that, a \emph{volume scan} (consisting of ten different elevations between 0.5° and 25°) is performed , starting \emph{in the middle} at 5.5° and tilting down to the surface (range \SI{180}{\kilo\metre}, resolution \SI{1}{\kilo\metre}). Next, the volume scan is concluded consisting of four elevations from 5.5° to the top (range \SIrange{120}{60}{\kilo\metre}, resolution \SI{1}{\kilo\metre}). At last, the whole scan sequence is completed by a 90° so-called \emph{bird-bath} scan for calibration purposes (see table \ref{tab:volumecoverage})~\cite{helmert2014dwds}. 
+Beam broadening at each elevation is determined by the antenna's aperture angle of approximately 1° (see section \ref{sec:radars}). 
+
+\begin{table}[!htbp]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		Scan & Elevation & Range resolution / \si{\kilo\metre} & Range / \si{\kilo\metre} \\
+		\hline
+		Precipitation & Orography following & 0.25 & 150 \\
+		Volume 1        & 5.5°       & 1    & 180 \\
+		Volume 2          & 4.5°       & 1    & 180 \\
+		Volume 3          & 3.5°       & 1    & 180 \\
+		Volume 4         & 2.5°       & 1    & 180 \\
+		Volume 5          & 1.5°       & 1    & 180 \\
+		Volume 6          & 0.5°       & 1    & 180 \\
+		Volume 7          & 8.0°       & 1    & 124 \\
+		Volume 8          & 12.0°      & 1    & 60  \\
+		Volume 9       & 17.0°      & 1    & 60  \\
+		Volume 10          & 25.0°      & 1    & 60 
+	\end{tabular}
+	\caption{DWD precipitation and volumetric scan specifications.}
+	\label{tab:volumecoverage}
+\end{table}
+
+\clearpage
+\section{Description of events}
+The analysis will be based on the case study of one day, the 4 June 2016.
+On this day, a series of small-scale and rapidly developing convective cells caused heavy rain, which led to disastrous flooding in the region of Bonn and Wachtberg (\emph{Mehlemer Bach} and \emph{Godesberger Bach}), as reported by local media~\cite[\emph{in german}]{unwetter_bonn, unwetter_mehlem}. 
+Fire brigades, police, lifeguards and rescue forces were in continuous service from the first alarm time at 14:30 throughout the night. Five bridges were destroyed, cellars flooded and residents needed to be evacuated. Figure \ref{fig:flooding} shows two pictures of the disastrous event, recorded by the local fire brigade of Wachtberg~\cite{unwetter_mehlem}.  
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim={0 1.5cm 0 0}, clip]{flooding1.jpg}
+		\caption{Flooded country road L158.}
+		\label{fig:flooding1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{flooding2.jpg}
+		\caption{Destruction of a bridge in Pech.}
+		\label{fig:flooding2}
+	\end{subfigure}
+	\caption{Destructive flooding in the area of Wachtberg on the 4 June 2016~\cite{unwetter_mehlem}.}
+	\label{fig:flooding}
+\end{figure}
+
+This severe weather has been observed by Essen radar (operated by the DWD) and a selection of six PPIs is presented in Figure \ref{fig:ppis_040616}, showing the rapidly developing cells in horizontal reflectivity $Z_\text{H}$ from 11 am till 4 pm in the region of Bonn. Their general movement was from the north-east to south-west and cells reached very high reflectivity factors of \SI{60}{\decibel Z}, thus indicating their severity with heavy rainfall and/or hail. However, there were no hail reports made to the \emph{European Severe Weather Database}\footnote{ESWD reports for the 4 June 2016 in Germany, \url{https://eswd.eu/queries/125484.html}}, but still hail occurrence can't be entirely excluded, as the database relies on reports by citizen scientists and trained storm spotters. 
+Moreover, the small-scale and closely located structure of cells can be clearly seen, which needs to be considered for evaluation, as the high dynamic of said cells is a challenging factor for nowcasting and analysis steps. This will be discussed later on.
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim={1.8cm 6cm 3.5cm 6.5cm}, clip]{11:00-bonn.png}
+		\caption{11:00}
+		\label{fig:040616-1100}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim={1.8cm 6cm 3.5cm 6.5cm}, clip]{12:00-bonn.png}
+		\caption{12:00}
+		\label{fig:040616-1200}
+	\end{subfigure}
+
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim={1.8cm 6cm 3.5cm 6.5cm}, clip]{13:00-bonn.png}
+		\caption{13:00}
+		\label{fig:040616-1300}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim={1.8cm 6cm 3.5cm 6.5cm}, clip]{14:00-bonn.png}
+		\caption{14:00}
+		\label{fig:040616-1400}
+	\end{subfigure}	
+
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim={1.8cm 6cm 3.5cm 6.5cm}, clip]{15:00-bonn.png}
+		\caption{15:00}
+		\label{fig:040616-1500}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=\textwidth, trim={1.8cm 6cm 3.5cm 6.5cm}, clip]{16:00-bonn.png}
+		\caption{16:00}
+		\label{fig:040616-1600}
+	\end{subfigure}	
+	\caption[PPIs of $Z_\text{H}$ on the event date.]{Six PPIs of $Z_\text{H}$ from the precipitation scan, observed by Essen radar on the event date, showing the small-scale convective cells which led to severe flooding in the region of Bonn.}
+	\label{fig:ppis_040616}
+\end{figure}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mythesis"
+%%% End: 

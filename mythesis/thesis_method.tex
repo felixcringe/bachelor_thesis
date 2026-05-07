@@ -1,0 +1,102 @@
+% !TEX root = mythesis.tex
+
+%==============================================================================
+\chapter{Methodology}
+\label{sec:method}
+%==============================================================================
+With the inspection of the disastrous consequences of the heavy rain event, the question of improving nowcasting through \zdr-columns is well motivated. By improvements of short-term forecasts, precautions such as evacuating residents and closing off roads could be taken with more lead time.
+
+In order to check the information content of \zdr-column signatures for nowcasting, the following methods will be used. 
+
+First, an algorithm for the detection of \zdr-columns is presented, which has already been tested in various applications. It localises the columns and determines their heights above the melting layer.
+With that, a spatio-temporal tracking algorithm is then introduced, with which the column evolutions can be quantified. This information is then compared to rainfall intensities from radar-based estimations to uncover possible correlations. Finally, this quasi-real-time precipitation information is compared to that of nowcasting.
+
+\section{\zdr-column detection}
+\label{sec:zdr-c_detection}
+For detecting \zdr-columns, an algorithm following \textcite{snyder} is used, which was adapted to the DWD radar network scanning characteristics by \textcite{mari}.
+
+\zdr-columns are observable and quantifiable with RHI scans, which exhibit a volumetric cross-section of weather events in the atmosphere at high resolutions (see Fig.~\ref{fig:rhi_zdr}). Given the \emph{volume coverage pattern} of the used radar system, no RHIs are directly available and thus need to be constructed synthetically. Since the different elevation scans have a temporal lag of up to four minutes, the so constructed RHIs feature a certain skewness, which needs to be minded for the \zdr-column detection. Additionally, the scanning method results in a reduced vertical resolution, due to beam-broadening and less coverage especially for higher elevations. This is counteracted by a linear interpolation, which increases effectively available elevations from 10 to 30~\cite[p.~70]{mari}.
+
+For the observation of \zdr-columns, vertical grid points above the environmental freezing point (\SI{0}{\degreeCelsius} isotherm) are then counted as long as \zdr~is over a certain threshold~\cite{snyder}. \citeauthor{snyder} developed the algorithm for S-band radars and used a threshold of $Z_{DR} \geq \SI{1}{\decibel}$, which is increased to \SI{2}{\decibel} for C-band \cite[p. 70]{mari}.
+
+Heights of the environmental freezing level are deduced from interpolation of atmospheric sounding data. Soundings are in-situ measurements of air pressure, temperature, humidity and wind from the atmosphere (by e.\ g.\ weather balloons). DWD operates 14 stations, which measure these parameters twice a day at noon and midnight~\cite{sounding_dwd}. This data is provided by a service from the Department of Atmospheric Science of the University of Wyoming~\cite{sounding}.
+
+The resulting \zdr-column heights are stored on a polar grid (azimuth and range), matching with the grid of polarimetric radar variables.
+
+\section{\zdr-column tracking}
+\label{sec:tracker}
+The algorithm for the spatio-temporal \zdr-column tracking uses an object-based approach.
+Since it is wanted to associate \zdr-columns with rainfall information (QPE and QPN), both data-sets need to be converted to the same grid. As QPE and QPN data is provided on DWD's \emph{RADOLAN} grid, a 2D Cartesian composite grid covering the whole radar network and with a grid spacing of $\SI{1}{\kilo\metre} \times \SI{1}{\kilo\metre}$, \zdr-column data is transformed to the same grid. This transformation is done with a nearest-neighbour interpolation, implemented in the \emph{wradlib} python library~\cite{wradlib}.
+
+Because \zdr-columns can have a spatial extent of sometimes several kilometres, the data is spread onto multiple grid pixels being distributed and accumulated in space without direct relation. To overcome this issue, the independent points in space are linked by a clustering algorithm. For that a \emph{DBSCAN} algorithm was chosen, which views clusters as areas of high density, separated by areas of low density. It accounts for the variability in shape of \zdr-columns, in contrast to other clustering algorithms as for example \emph{k-means}, which is i.\ a.\ dependent on a fixed number of clusters defined beforehand~\cite{dbscan}. The algorithm takes two arguments, one is the maximum distance between different points ($\epsilon$ value) and the other defines how many of those points are necessary to be detected as one cluster (minimum samples). Given the common grid spacing, the parameters are chosen to only detect a cluster with directly neighbouring pixels, resulting in $\epsilon = \SI{1}{\kilo\metre}$ and a min.\ sample value of 1. With this settings some visual quality control was performed, checking that no pixels were excluded and that generally good clustering results were being achieved.
+
+After having established \zdr-column objects by clustering, they need to be related in time. For this a tracking algorithm following \textcite{zdr-tracking} is used. First, all \zdr-column centroids are projected from their time of identification $t_n$ to the expected position at $t_{n+1}$. For that, the optical flow of observed storm-cells is calculated with the \emph{Lukas-Kanade} flow method, implemented in \emph{pySTEPS} library~\cite{pysteps}.  Local features are tracked in a sequence of three radar images and are then interpolated to obtain a smooth field of motion vectors.
+Next, around the projected centroids a search radius of $r_\text{zc} = \sqrt{\frac{A}{\pi}}$ (where $A$ is the \zdr-column's area) is established and all centroids at $t_{n+1}$ located inside are found. If there is only one column within this circle, the two objects are matched (see Figure~\ref{fig:zdr_tracking1}). 
+
+For all remaining unmatched centroids at $t_{n+1}$, a search circle with radius $r_\text{zc}$ is used and all projected centroids from $t_n$ inside are found. For multiple projected columns within the circles, a cost function (\cite[eq.~(7)]{zdr-tracking}) is defined:
+\begin{equation}
+\label{eq:cost}
+c_{i, j} = (x_{i} - x_{j})^2 +(y_{i} - y_{j})^2 + \dfrac{A_{j}}{\pi} \left( \dfrac{|A_{i} - A_\text{j}|}{\max(A_{i} \land A_{j})} + \dfrac{|d_{i} - d_{j}|}{\max(d_{i} \land d_{j})} \right)
+\end{equation}
+where subscripted $i$ and $j$ denote (projected-) centroids at $t_n$ and $t_{n+1}$. $x$ and $y$ are the locations, $A$ the area, $d$ \zdr-column maximum pixel values, $|a|$ is the magnitude and $\max(a \land b)$ is the maximum of both values~\cite[p.~26]{zdr-tracking}. The \zdr-columns with lowest $c_{i, j}$ are matched (see Figure \ref{fig:zdr_tracking2}) and at last, all still remaining centroids at $t_{n+1}$ are established as new column objects.
+This procedure is repeated for all times of observation, although tracked \zdr-columns without matching centroid in a subsequent time step $t_{n+1}$ are marked as inactive and won't be considered in the following time steps.
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth, trim={10cm 15cm 14cm 12cm}, clip]{tracking_schema1.png}
+		\caption{Illustration of projection and matching of \zdr-column objects. For one object located in the projected radius $r_\text{zc}$, the two columns are matched~\cite[Fig.~10, modified]{zdr-tracking}.}
+		\label{fig:zdr_tracking1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.49\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth, trim={10cm 49.2cm 14cm 12cm}, clip]{tracking_schema2.png}
+		\caption{Illustration of unassociated column object matching in time step $t_{n+1}$. For multiple projected objects from times $t_n$ located in the radius $r_\text{zc}$ a cost function $c_{i, j}$ is calculated. The \zdr-column with the lowest cost function is associated. In this example, the bottom column object would be associated, assuming constant peak values~\cite[Fig.~11, modified]{zdr-tracking}.}
+		\label{fig:zdr_tracking2}
+	\end{subfigure}
+	\caption[Illustration of \zdr-column tracking.]{Illustration of temporal \zdr-column tracking (as implemented by \textcite{zdr-tracking}). Red circles represent \zdr-column objects and their projections are displayed in blue. For both figures, the left part shows times $t_n$ and the right subsequent time-steps $t_{n+1}$.}
+	\label{fig:zdr_tracking}
+\end{figure}
+
+The performance of the tracking algorithm can be measured by evaluation of three criteria: duration of tracks, number of mismatches and jumps. Undesired track qualities are visualised in Figure~\ref{fig:tracking_performance}, where $(a)$ and $(b)$ show dropped associations, which decrease track lengths. $(c)$ and $(d)$ display wrong associations, a mismatch and jump respectively~\cite[p.~28]{zdr-tracking}.
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8\textwidth]{tracking_performance.png}
+	\caption[Illustration of undesired \zdr-column track qualities.]{Undesired track qualities. Dropped association is marked by dashed lines~\cite[Fig.~12, modified]{zdr-tracking}.}
+	\label{fig:tracking_performance}
+\end{figure}
+
+\section{Evaluation of \zdr-column and rainfall properties}
+\label{sec:zc-qpe}
+With the obtained spatial-temporal \zdr-column information, further investigation of influence on precipitation can be made.
+For that a $R(A_\text{V})R(K_\text{DP})$ QPE-product will be used.
+At first, an overall comparison is made between QPE-cells containing and not containing \zdr-columns. One QPE-cell is defined with an object based approach similar to \zdr-column object identification by clustering the QPE data with the \emph{DBSCAN} algorithm. To increase sharpness of cell contours, QPE $< \SI{1}{mmh^{-1}}$ is masked, because it seemed after visual inspection, that different separable QPE-cells were connected by areas of low precipitation rates.
+
+After a more general affirmation that the presence of \zdr-columns would lead to increased rainfall rates, a more in-depth investigation was made, with the idea that a designated area of enhanced rainfall can be found in direct vicinity of detected \zdr-columns and is depending on the column properties. 
+The approach is similar to the tracking algorithm itself, in each time-step $t_{n}$ a circle around a centroid location is established. This radius needs to be investigated first by evaluation of the impact area associated to \zdr-columns. 
+Since many convective cells were located closely, it was important to exclude rainfall data from cells not associated to \zdr-columns. For that, the QPE-cell clustering was used and rainfall intensities were only obtained within one QPE-cell.
+To account for a possible lead time of \zdr-column intensification before enhancement in rainfall, it was searched for up to four time-steps after the last detection of the column for precipitation information. 
+For that, centroids are projected again into subsequent time-steps.
+The so examined time-series are compared with horizontal reflectivity obtained from the same search perimeter and \zdr-column properties, as maximum height and complete column volume.
+
+At last, a comparison of radar rainfall estimates (QPE) and nowcasting (QPN) will be made, for which a nowcasting, following the spectral-prognosis (S-PROG) method, will be used.
+It is assumed that with increments of lead times after the initiation of nowcasting, the forecast of rainfall in regions associated with \zdr-columns will be underestimated. To confirm this, precipitation rates inside circles around \zdr-columns are obtained for both QPE and QPN, comparing the found information for up to two hours after the initiation of nowcasting.
+
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mythesis"
+%%% End: 
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {UKenglish}{}
+\babel@toc {ngerman}{}
+\babel@toc {UKenglish}{}
+\babel@toc {UKenglish}{}
+\babel@toc {UKenglish}{}
+\babel@toc {ngerman}{}
+\babel@toc {UKenglish}{}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Theory on Radar Meteorology}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Weather radars}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Radar variables}{4}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Reflectivity}{4}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Differential reflectivity $Z_\text {DR}$}{5}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Differential propagation phase shift $\Phi _\text {DP}$ and specific differential phase $K_\text {DP}$}{6}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Specific attenuation $A$}{6}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Co-polar correlation coefficient $\rho _\text {hv}$}{6}{subsection.2.2.5}%
+\contentsline {section}{\numberline {2.3}$Z_\text {DR}$-columns}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Weather radar products: QPE and QPN}{8}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Quantitative Precipitation Estimation - QPE}{8}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Quantitative Precipitation Nowcasting - QPN}{8}{subsection.2.4.2}%
+\contentsline {chapter}{\numberline {3}Data sets}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Volume coverage pattern}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Description of events}{11}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Methodology}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}$Z_\text {DR}$-column detection}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}$Z_\text {DR}$-column tracking}{14}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Evaluation of $Z_\text {DR}$-column and rainfall properties}{15}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Results}{17}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Analysis of $Z_\text {DR}$-column identification and tracking}{17}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Analysis of $Z_\text {DR}$-column and rainfall properties}{20}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Improvement of nowcasting}{26}{subsection.5.2.1}%
+\contentsline {chapter}{\numberline {6}Conclusions and discussion}{29}{chapter.6}%
+\contentsline {subsubsection}{\nonumberline Do $Z_\text {DR}$-column attributes contribute to rainfall rates and are correlations quantifiable?}{29}{section*.21}%
+\contentsline {subsubsection}{\nonumberline What is the time lag between an enhancement of $Z_\text {DR}$-column attributes and increased rainfall and is there a dedicated region of impact?}{30}{section*.22}%
+\contentsline {subsubsection}{\nonumberline Are $Z_\text {DR}$-column signatures beneficial for nowcasting improvement?}{30}{section*.23}%
+\contentsline {subsubsection}{\nonumberline Future directions}{31}{section*.24}%
+\contentsline {chapter}{\nonumberline Bibliography}{33}{chapter*.25}%
+\contentsline {chapter}{\numberline {A}Appendix -- Additional information}{37}{appendix.A}%
+\contentsline {subsubsection}{\nonumberline $Z_\text {DR}$-column and QPE time series}{37}{section*.26}%
+\contentsline {subsubsection}{\nonumberline $Z_\text {DR}$-column tracking}{38}{section*.28}%
+\contentsline {chapter}{\nonumberline List of Figures}{39}{chapter*.30}%
+\contentsline {chapter}{\nonumberline List of Tables}{41}{chapter*.31}%

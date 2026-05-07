@@ -1,0 +1,75 @@
+\section{QPE and QPN}
+For analysis of rainfall properties a QPE product derived from dual-polarisation radar variables, vertical specific attenuation $A_V$ and specific differential phase $K_{DP}$, will be used, where $A_V$ is calculated by observed $Z_V$ and $\Phi_{DP}$. 
+$R(A_V)$ is used until $Z>\SI{10000}{mm^6 m^{-3}}$ (\SI{40}{\decibel Z}), then $R(K_{DP})$ is applied.
+
+To compare the instantaneous radar rainfall estimations, a QPN product will be used, using the S-PROG method, which exploits the scaling behaviour of rain and its scale-dependent predictability property. A QPE field is decomposed in cascade levels of decreasing spatial scales and temporal evolution of each level is estimated using an autoregressive $2^{nd}$ order model. Each level is advected within a nowcast period using the estimated motion field. Later, the advected levels are integrated to produce deterministic QPN fields~\cite{qpn_sprog}.
+
+The plots displayed indeed support the hypothesis of using \zdr-column properties as precursor for increased rainfall in small areas associated to \zdr-columns. The possibility of a correlation between intensities of these \zdr-column properties and precipitation was then the next thing evaluated.
+
+
+
+
+
+
+\subsection{Region of impact}
+\label{sec:impact}
+As introduced in section \ref{sec:zc-qpe}, the maximum precipitation intensity's location inside clustered QPE-cells for each \zdr-column is found. From this the distance to centroid \zdr-column's location is calculated, with the idea that \zdr-columns lead to an enhanced precipitation intensity in their direct vicinity. Figure \ref{fig:rain_distance} shows a box-plot of these distances for all columns located inside a QPE cell. 
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{distance_boxplot.png}
+	\caption{Distance of maximum precipitation intensity to \zdr-column centroid location.}
+	\label{fig:rain_distance}
+\end{figure}
+
+It seems that most of the maximum precipitation intensities are located nearby to \zdr-column location, with a median distance of \SI{2.83}{\kilo\metre} and a span of minimum to maximum distances from \SIrange{1}{9}{\kilo\metre} (lower to upper whisker). It seems, that there are a lot of outliers, but in contrast to the 1277 distances derived from all tracked columns in all time-steps are the 99 outliers insignificant.
+
+Looking only at this it isn't directly observable if the distances are close to the centroid location as the columns itself have a certain spatial extent. Therefore the distances are now scaled by the \zdr-column's radius $r_{zc}$, which is represented again in a box-plot (see Figure \ref{fig:rain_norm_distance}).
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{distance_norm_extent_boxplot.png}
+	\caption{Distance of maximum precipitation intensity to \zdr-column centroid location.}
+	\label{fig:rain_norm_distance}
+\end{figure}
+
+With this it is obvious, that most of the points are indeed neighbouring directly the \zdr-columns. The median scaled distance is exactly 1 and most of the values (indicated by the box) are within 0.56 and 1.58 times the radius $r_{zc}$. 
+
+With this results the evaluation of tracked \zdr-columns and a search radius of two times $r_{zc}$ is established.
+Further, the maximum precipitation intensity inside this circle will be taken as variable for evaluation the rainfall properties.
+
+\subsection{Lead time analysis}
+\label{sec:leadtime}
+With this results it was decided to evaluate only \zdr-columns with detected precipitation informations reaching a minimum of 20 minutes. Shorter durations aren't practicable for evaluation of lead times, because obviously durations of e.\ g.\ \SI{5}{\minute} won't be able to show lead times of greater than that time. 
+
+In figure \ref{fig:zc_0406_1} and \ref{fig:zc_0406_2} are displayed two example tracked \zdr-columns and their associated rainfall intensities (according to section \ref{sec:impact} and max.\ intensity), both long living ones, the first one being observed almost two hours. 
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.0\textwidth]{zc_1-1.png}
+	\caption{Tracked $Z_{DR}$-column median heights and their associated rainfall intensities from the 04/06/16. The filed red area indicates the span of minimum to maximum \zdr-column height observed in itself.}
+	\label{fig:zc_0406_1}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=1.0\textwidth]{zc_1-2.png}
+	\caption{Tracked $Z_{DR}$-column median heights and their associated rainfall intensities from the 04/06/16. The filed red area indicates the span of minimum to maximum \zdr-column height observed in itself.}
+	\label{fig:zc_0406_2}
+\end{figure}
+
+Both time series show spikes and their occurrence might be correlated with a certain time lag. 
+To investigate this it is searched for each spike in precipitation intensity a previous spike in \zdr-column height. The difference of time between each is the lead time.
+
+From all detected columns 201 reach the criterium of a \SI{20}{\minute} minimum life time. From this, all significant spikes are calculated. Significance is tested first with a hard threshold of \SI{500}{\metre} for \zdr-columns and $\SI{20}{\milli\metre \hour^{-1}}$ for maximum QPE. Additionally the last increase and variance are tested to be in sum higher than the standard deviation times a significance factor of 1.5. From all columns a number of 173 spikes reach this criterium.
+
+In total, lead times between \SIrange{5}{20}{\minute} could be found. Figure \ref{fig:lag_qpe} shows the distribution of precipitation intensities according to their lag time.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.8\textwidth, trim={1cm 1cm 1cm 1cm}, clip]{lead_time_qpe.png}
+	\caption{Box-plot showing the precipitation intensities associated to lead times.}
+	\label{fig:lag_qpe}
+\end{figure}
+
+According to this, it doesn't seem that the precipitation intensity is highly correlated to lead times, even though the associated rainfall intensity to a 20 minute lead time is approximately $\SI{50}{\milli\metre\hour^{-1}}$ and for the other lead times it's approx.\ $\SI{40}{\milli\metre\hour^{-1}}$, because for the higher lead times were less spikes detected. Therefore the mean lead time is calculated, which is $\approx \SI{9}{\minute}$ and other correlations need to be investigated.

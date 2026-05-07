@@ -1,0 +1,57 @@
+% !TEX root = mythesis.tex
+
+%==============================================================================
+\chapter{Conclusions and discussion}
+\label{sec:discussion}
+%==============================================================================
+
+In this thesis, a spatio-temporal \zdr-tracking algorithm was applied to C-band polarimetric radar observations, in order to gain valuable informations about \zdr-column evolutions. With the herewith localised and quantised tracks, the main goal was to confirm correlations of \zdr-column properties with ground rainfall, including a possible lead time, so that short-term weather forecasts can be improved and alarm times before severe and possibly life threatening weather events can be enhanced.
+
+Evaluation of \zdr-tracking produced reasonable results, with movements in direction of overall storm motion. 
+However, it seemed that associations were dropped in the course of tracking \zdr-columns, which can be explained by the fact that temporal gaps were not taken into account. Because \zdr-columns are highly dynamic and extremely small-scaled signatures, a column might not be identified for a short time in one time-step, but again in subsequent times. As a result, a new track would be initiated and chronology would get lost. 
+Furthermore, the clustering of columns for areal allocation does not seem to be the best method as well, since spatial discontinuities lead to the creation of a new \zdr-column object. This can be seen in the high number of tracks with lifetimes of 5 minutes. These are usually located in close proximity to other column objects, which indicates dropped relation due to the nature of this method. 
+A clustering approach was also chosen to evaluate the rainfall information in order to identify individual cell structures. This again has its limitations, 
+as it does not take into account the intrinsic cell dynamics and was calculated from QPE-data, which is an estimation from multiple radar variables, therefore increasing uncertainty in contrast to direct observations out of, for example, reflectivity data. 
+
+In addition, an attempt was made to observe rainfall information after the last detection of a \zdr-column, using a simple projection of the last centroid position. Despite the assignment of cells and projected centroids only in the direct vicinity, misassignments cannot be excluded.
+
+These limitations were too great for a complete smaller-scale statistical analysis of all \zdr-tracks. 
+Nevertheless, some qualitative and quantitative statements can be made.
+
+\subsubsection{Do \zdr-column attributes contribute to rainfall rates and are correlations quantifiable?}
+It was possible to verify the impact of \zdr-columns on rainfall rates, which reproduces investigations obtained in previous research. In a general view, it was confirmed that highest precipitation rates were associated to \zdr-column presence, whereas lower precipitation rates were usually observed in regions without the existence of \zdr-columns. 
+
+In addition, time-series of tracked \zdr-columns have been analysed and a linear correlation between maximum height or volume of \zdr-columns was found. 
+Thus, rainfall intensity indeed seems to be dependent on \zdr-column properties, where lowest observed volume or height is connected to average rainfall intensities of approximately $\SI{25}{\milli\metre\hour^{-1}}$ and highest observations lead to rates of approx.\ \SIrange{40}{45}{\milli\metre\hour$^{-1}$}.
+However, the found correlations are subject to a rather high uncertainty, which is most likely restricted by the aforementioned limitations. An improvement of identification and tracking by better spatial localisation of column objects and by introducing the possibility of a time jump in tracking should lead to better results. In addition, the introduction of cell tracking could prevent misclassification and would allow better observation of the cell evolutions and associated rain rates in which \zdr-columns were previously detected.
+
+Apart from analysing the rainfall rates from radar-based estimations, it is additionally advised to investigate precipitation enhancements by a horizontal reflectivity ratio, similar to \textcite{picca2010zdr}, but adjusted to rainfall. This could bring some refinement, as a ratio of logarithmic-scaled $Z_\text{H}$ could be a more  aggregated measure. 
+
+\subsubsection{What is the time lag between an enhancement of \zdr-column attributes and increased rainfall and is there a dedicated region of impact?}
+In a qualitative analysis of a selection of four tracks, the hypothesis that an increase in rainfall intensity can be localised in direct vicinity of \zdr-columns could be affirmed, where the impact area can be measured in units of the radius of the corresponding \zdr-columns. For the analysed event, an area of impact within two times this radius seemed to produce good results, nevertheless, this could be refined by better resolutions and can differ for other cases.
+Apart from that, the enhancement of rainfall following an intensification of \zdr-column height or volume could be confirmed for the selection of columns, with lead times of 5 to 10 minutes.
+This corresponds to the relation already found by \textcite{adachi2013detection}, who found an intensification with a time lag of 10 minutes. 
+
+With this in mind, a further analysis of the lead times as a function of intrinsic cell or \zdr-column properties seems well motivated.
+
+\subsubsection{Are \zdr-column signatures beneficial for nowcasting improvement?}
+In a final step, the ability to improve predictions was particularly confirmed. After only one time step, the nowcasted rainfall intensities were four times lower than those observed in real-time. Nowcasting quality became quite poor after 20 minutes, which can also be seen in the number of QPE and QPN observed at locations of \zdr-columns. It can be assumed, that the smoothing process in nowcasting algorithms leads to some local displacement of rainfall information and underestimation of precipitation rates. Taking the presence of \zdr-columns as indicator for localisation of enhanced rain and using the motions and dynamics as precursors for high rain rates seems to be practical.
+The introduction of lead times could bring some further improvements.
+
+\newpage
+\subsubsection{Future directions}
+At last, some final remarks will be made, giving some suggestions for further investigation.
+\begin{enumerate}
+	\item Better spatial allocations of \zdr-columns could be obtained, following the method implemented by \textcite{zdr-tracking}, who used an enhanced watershed algorithm, which uses \zdr-column properties additionally to their locations as parameter.
+	\item Instead of cell analysis by clustering of QPE-fields, it is suggested to introduce some sort of reflectivity-based cell tracking. By that, observation and analysis of rainfall and cell development after the extinction of \zdr-columns can be made.
+	\item The introduction of reflectivity ratio as proxy for rainfall enhancement could eliminate more uncertainty as it is not as dependent on data fluctuations, like extreme outliers in QPE.
+\end{enumerate}
+Given these additional measures, a statistical analysis of \zdr-column and precipitation proxy time-series should be possible, so that a lead time can be investigated, which is perhaps \zdr-column property-dependent.
+
+Nevertheless, some uncertainty will still exist, due to the radar characteristics and volume coverage. An increase in volumetric scan and temporal resolution would lead to an extensive improvement of data quality.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "mythesis"
+%%% End: 

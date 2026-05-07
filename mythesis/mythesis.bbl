@@ -1,0 +1,1649 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{doviak_doppler_1993}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7d77c9d6d48e19e2f15f372d14fe9d82}{%
+           family={Doviak},
+           familyi={D\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=f701b6aaa40c9d4629b080534c8aa8f2}{%
+           family={Zrnić},
+           familyi={Z\bibinitperiod},
+           given={Dušan\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Diego}%
+      }
+      \list{publisher}{1}{%
+        {Academic Press}%
+      }
+      \strng{namehash}{fd7d9d14628d6d341a9a6f8ac9842b96}
+      \strng{fullhash}{fd7d9d14628d6d341a9a6f8ac9842b96}
+      \strng{bibnamehash}{fd7d9d14628d6d341a9a6f8ac9842b96}
+      \strng{authorbibnamehash}{fd7d9d14628d6d341a9a6f8ac9842b96}
+      \strng{authornamehash}{fd7d9d14628d6d341a9a6f8ac9842b96}
+      \strng{authorfullhash}{fd7d9d14628d6d341a9a6f8ac9842b96}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2nd ed}
+      \field{isbn}{9780122214226}
+      \field{title}{Doppler radar and weather observations}
+      \field{year}{1993}
+      \keyw{Radar meteorology,Observations,Doppler radar}
+    \endentry
+    \entry{zhangWeatherPola}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1dedabd162a8ccbae7102a7286fd6056}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Guifu},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press, Inc.}%
+      }
+      \strng{namehash}{1dedabd162a8ccbae7102a7286fd6056}
+      \strng{fullhash}{1dedabd162a8ccbae7102a7286fd6056}
+      \strng{bibnamehash}{1dedabd162a8ccbae7102a7286fd6056}
+      \strng{authorbibnamehash}{1dedabd162a8ccbae7102a7286fd6056}
+      \strng{authornamehash}{1dedabd162a8ccbae7102a7286fd6056}
+      \strng{authorfullhash}{1dedabd162a8ccbae7102a7286fd6056}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This book presents the fundamentals of polarimetric radar remote sensing through understanding wave scattering and propagation in geophysical media filled with hydrometers and other objects. The text characterizes the physical, statistical, and electromagnetic properties of hydrometers and establishes the relations between radar observables and physical state parameters. It introduces advanced remote sensing techniques (such as polarimetric phased array radar) and retrieval methods for physical parameters. The book also illustrates applications of polarimetric radar measurements in hydrometer classification, particle size distribution retrievals, microphysical parameterization, and weather quantification and forecast.}
+      \field{edition}{1st}
+      \field{isbn}{1439869588}
+      \field{title}{Weather Radar Polarimetry}
+      \field{year}{2016}
+    \endentry
+    \entry{seliga1976potential}{article}{}
+      \name{author}{2}{}{%
+        {{hash=0a5b040b9c75cda739f2b9ed5b69f822}{%
+           family={Seliga},
+           familyi={S\bibinitperiod},
+           given={T\bibnamedelima Aꎬ},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f558f730e07aa34362bd590f4dded4c3}{%
+           family={Bringi},
+           familyi={B\bibinitperiod},
+           given={VN},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{47b222acfe7088ee8a954f088a73706e}
+      \strng{fullhash}{47b222acfe7088ee8a954f088a73706e}
+      \strng{bibnamehash}{47b222acfe7088ee8a954f088a73706e}
+      \strng{authorbibnamehash}{47b222acfe7088ee8a954f088a73706e}
+      \strng{authornamehash}{47b222acfe7088ee8a954f088a73706e}
+      \strng{authorfullhash}{47b222acfe7088ee8a954f088a73706e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Meteorology and Climatology}
+      \field{number}{1}
+      \field{title}{Potential use of radar differential reflectivity measurements at orthogonal polarizations for measuring precipitation}
+      \field{volume}{15}
+      \field{year}{1976}
+      \field{pages}{69\bibrangedash 76}
+      \range{pages}{8}
+    \endentry
+    \entry{bringiInSituZDR}{article}{}
+      \name{author}{3}{}{%
+        {{hash=f558f730e07aa34362bd590f4dded4c3}{%
+           family={Bringi},
+           familyi={B\bibinitperiod},
+           given={V.\bibnamedelimi N.},
+           giveni={V\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=c6b49442afb6f2607bd4a98c5673a37d}{%
+           family={Burrows},
+           familyi={B\bibinitperiod},
+           given={D.\bibnamedelimi A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e67ae6df43c298ce32b6f41e9ded50c2}{%
+           family={Menon},
+           familyi={M\bibinitperiod},
+           given={S.\bibnamedelimi M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d8deed224eed267b7efb7592b9dd9fef}
+      \strng{fullhash}{d8deed224eed267b7efb7592b9dd9fef}
+      \strng{bibnamehash}{d8deed224eed267b7efb7592b9dd9fef}
+      \strng{authorbibnamehash}{d8deed224eed267b7efb7592b9dd9fef}
+      \strng{authornamehash}{d8deed224eed267b7efb7592b9dd9fef}
+      \strng{authorfullhash}{d8deed224eed267b7efb7592b9dd9fef}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Appl. Meteor.}
+      \field{title}{Multiparameter radar and aircraft study of raindrop spectral evolution in warm-based clouds}
+      \field{volume}{30}
+      \field{year}{1991}
+      \field{pages}{853\bibrangedash 880}
+      \range{pages}{28}
+    \endentry
+    \entry{loneyInSituZDR}{article}{}
+      \name{author}{4}{}{%
+        {{hash=5f96984f3d353453a77d19d018e05ac1}{%
+           family={Loney},
+           familyi={L\bibinitperiod},
+           given={M.\bibnamedelimi L.},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=ee9acd7d8e86940aeaef1471fdbc5aa4}{%
+           family={Zrnić},
+           familyi={Z\bibinitperiod},
+           given={D.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3e368af11d3092401910ce16163bbb4a}{%
+           family={Straka},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=d8edfbdec45586ef3bac1ee09b24c214}{%
+           family={Ryzhkov},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{949551ab5de11daf81b6a351b39726e3}
+      \strng{fullhash}{893f6d9ddf5caf2f518acb143314a17f}
+      \strng{bibnamehash}{949551ab5de11daf81b6a351b39726e3}
+      \strng{authorbibnamehash}{949551ab5de11daf81b6a351b39726e3}
+      \strng{authornamehash}{949551ab5de11daf81b6a351b39726e3}
+      \strng{authorfullhash}{893f6d9ddf5caf2f518acb143314a17f}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{J. Appl. Meteor.}
+      \field{title}{Enhanced polarimetric radar signatures above the melting level in a supercell storm}
+      \field{volume}{41}
+      \field{year}{2002}
+      \field{pages}{1179\bibrangedash 1194}
+      \range{pages}{16}
+    \endentry
+    \entry{leon2016convective}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=d8aa5f3b47f4e97bfc0b40b12fcb45a9}{%
+           family={Leon},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima C},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=0bd3f3a32f135eac30d8e9171291db98}{%
+           family={French},
+           familyi={F\bibinitperiod},
+           given={Jeffrey\bibnamedelima R},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=61a611267693671a41ed628a6f43fa3f}{%
+           family={Lasher-Trapp},
+           familyi={L\bibinithyphendelim T\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e43367572cc419d3653a7746d7ed10c9}{%
+           family={Blyth},
+           familyi={B\bibinitperiod},
+           given={Alan\bibnamedelima M},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c41018c0c6a28e43a93638a912b59750}{%
+           family={Abel},
+           familyi={A\bibinitperiod},
+           given={Steven\bibnamedelima J},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=66e92fe0bd13e572cff30f91c0f31dc4}{%
+           family={Ballard},
+           familyi={B\bibinitperiod},
+           given={Susan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=c874a45e3271062402aad18b8ed1f77d}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cc1217c1df44af8fdfad4301cfc75edd}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Lindsay\bibnamedelima J},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=221da32fa1f68c9767a3318a57567cbe}{%
+           family={Bower},
+           familyi={B\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod}}}%
+        {{hash=f2e70c226a51eec9f81f2d847ff4d238}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{aba84d9e23990781438fd5b7b6ee1715}
+      \strng{fullhash}{9b52ac1448c2e5e221254cf33bbb892e}
+      \strng{bibnamehash}{aba84d9e23990781438fd5b7b6ee1715}
+      \strng{authorbibnamehash}{aba84d9e23990781438fd5b7b6ee1715}
+      \strng{authornamehash}{aba84d9e23990781438fd5b7b6ee1715}
+      \strng{authorfullhash}{9b52ac1448c2e5e221254cf33bbb892e}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bulletin of the American Meteorological Society}
+      \field{number}{6}
+      \field{title}{The Convective Precipitation Experiment (COPE): Investigating the origins of heavy precipitation in the southwestern United Kingdom}
+      \field{volume}{97}
+      \field{year}{2016}
+      \field{pages}{1003\bibrangedash 1020}
+      \range{pages}{18}
+    \endentry
+    \entry{adachi2013detection}{article}{}
+      \name{author}{4}{}{%
+        {{hash=599b509146357f9be987b68f754e16f8}{%
+           family={Adachi},
+           familyi={A\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5bd58a25a672d5f976258408eb579ecc}{%
+           family={Kobayashi},
+           familyi={K\bibinitperiod},
+           given={T},
+           giveni={T\bibinitperiod}}}%
+        {{hash=16a31f0ac751e025a235a1d085ec3ecf}{%
+           family={Yamauchi},
+           familyi={Y\bibinitperiod},
+           given={H},
+           giveni={H\bibinitperiod}}}%
+        {{hash=da71300d819941bc1753dd085750c66c}{%
+           family={Onogi},
+           familyi={O\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Copernicus GmbH}%
+      }
+      \strng{namehash}{5fe780c730721177586eeb23edf12c3a}
+      \strng{fullhash}{2d786d7f361ea0ec59bcc96554786f0e}
+      \strng{bibnamehash}{5fe780c730721177586eeb23edf12c3a}
+      \strng{authorbibnamehash}{5fe780c730721177586eeb23edf12c3a}
+      \strng{authornamehash}{5fe780c730721177586eeb23edf12c3a}
+      \strng{authorfullhash}{2d786d7f361ea0ec59bcc96554786f0e}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Atmospheric Measurement Techniques}
+      \field{number}{10}
+      \field{title}{Detection of potentially hazardous convective clouds with a dual-polarized C-band radar}
+      \field{volume}{6}
+      \field{year}{2013}
+      \field{pages}{2741\bibrangedash 2760}
+      \range{pages}{20}
+    \endentry
+    \entry{RadarDerivedStructuralandPrecipitationCharacteristicsofZDRColumnswithinWarmSeasonConvectionovertheUnitedKingdom}{article}{}
+      \name{author}{9}{}{%
+        {{hash=f5adcee076b2925d75a57a80c04e774c}{%
+           family={Plummer},
+           familyi={P\bibinitperiod},
+           given={David\bibnamedelima M.},
+           giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0bd3f3a32f135eac30d8e9171291db98}{%
+           family={French},
+           familyi={F\bibinitperiod},
+           given={Jeffrey\bibnamedelima R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=d8aa5f3b47f4e97bfc0b40b12fcb45a9}{%
+           family={Leon},
+           familyi={L\bibinitperiod},
+           given={David\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e43367572cc419d3653a7746d7ed10c9}{%
+           family={Blyth},
+           familyi={B\bibinitperiod},
+           given={Alan\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=61a611267693671a41ed628a6f43fa3f}{%
+           family={Lasher-Trapp},
+           familyi={L\bibinithyphendelim T\bibinitperiod},
+           given={Sonia},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cc1217c1df44af8fdfad4301cfc75edd}{%
+           family={Bennett},
+           familyi={B\bibinitperiod},
+           given={Lindsay\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c5436133f215eb7a883693c14ef585d8}{%
+           family={Dufton},
+           familyi={D\bibinitperiod},
+           given={David\bibnamedelimb R.\bibnamedelimi L.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=01bac23f8eb60fddef4111a836b4f48e}{%
+           family={Jackson},
+           familyi={J\bibinitperiod},
+           given={Robert\bibnamedelima C.},
+           giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=79bee8633c46d0e76bf2ba7821c0a663}{%
+           family={Neely},
+           familyi={N\bibinitperiod},
+           given={Ryan\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{58829a4cac7ea29a4880f1b7229fe2c2}
+      \strng{fullhash}{158a7e76958e9d99fa22663fce7c4f38}
+      \strng{bibnamehash}{58829a4cac7ea29a4880f1b7229fe2c2}
+      \strng{authorbibnamehash}{58829a4cac7ea29a4880f1b7229fe2c2}
+      \strng{authornamehash}{58829a4cac7ea29a4880f1b7229fe2c2}
+      \strng{authorfullhash}{158a7e76958e9d99fa22663fce7c4f38}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Meteorology and Climatology}
+      \field{number}{11}
+      \field{title}{Radar-Derived Structural and Precipitation Characteristics of ZDR Columns within Warm-Season Convection over the United Kingdom}
+      \field{volume}{57}
+      \field{year}{01 Nov. 2018}
+      \field{pages}{2485\bibrangedash 2505}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1175/JAMC-D-17-0134.1
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/apme/57/11/jamc-d-17-0134.1.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/apme/57/11/jamc-d-17-0134.1.xml
+      \endverb
+    \endentry
+    \entry{picca2010zdr}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=fc5ccfadc76e0d97f879f4020994e8e7}{%
+           family={Picca},
+           familyi={P\bibinitperiod},
+           given={Joseph\bibnamedelima C},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=c02df614abe154993d6f54d206f31d5f}{%
+           family={Kumjian},
+           familyi={K\bibinitperiod},
+           given={MR},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d8edfbdec45586ef3bac1ee09b24c214}{%
+           family={Ryzhkov},
+           familyi={R\bibinitperiod},
+           given={AV},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d07bcf8d26ff8eaed329c91c6792f815}
+      \strng{fullhash}{d07bcf8d26ff8eaed329c91c6792f815}
+      \strng{bibnamehash}{d07bcf8d26ff8eaed329c91c6792f815}
+      \strng{authorbibnamehash}{d07bcf8d26ff8eaed329c91c6792f815}
+      \strng{authornamehash}{d07bcf8d26ff8eaed329c91c6792f815}
+      \strng{authorfullhash}{d07bcf8d26ff8eaed329c91c6792f815}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{25th Conf. on Severe Local Storms}
+      \field{title}{ZDR columns as a predictive tool for hail growth and storm evolution}
+      \field{year}{2010}
+    \endentry
+    \entry{kumijan2014}{article}{}
+      \name{author}{6}{}{%
+        {{hash=ca33d16b8e71cf7d78378b5e998c462b}{%
+           family={Kumjian},
+           familyi={K\bibinitperiod},
+           given={Matthew\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=249b60b392b8182a79d6b8f95a0a8ac0}{%
+           family={Khain},
+           familyi={K\bibinitperiod},
+           given={Alexander\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=e02b9e1454080a1903174c9e7721319c}{%
+           family={Benmoshe},
+           familyi={B\bibinitperiod},
+           given={Nir},
+           giveni={N\bibinitperiod}}}%
+        {{hash=63280eb00798f5661828d7f01693c875}{%
+           family={Ilotoviz},
+           familyi={I\bibinitperiod},
+           given={Eyal},
+           giveni={E\bibinitperiod}}}%
+        {{hash=7875c992752e844672776e3cc6722e74}{%
+           family={Ryzhkov},
+           familyi={R\bibinitperiod},
+           given={Alexander\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=521c0ee2ea9a3cb7309c0ae93fabbefd}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Vaughan\bibnamedelimb T.\bibnamedelimi J.},
+           giveni={V\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{839ef1bc5eb8e9a41f8d915b09fc278f}
+      \strng{fullhash}{6a2edf65eeddc375827b996d8c4dd5ed}
+      \strng{bibnamehash}{839ef1bc5eb8e9a41f8d915b09fc278f}
+      \strng{authorbibnamehash}{839ef1bc5eb8e9a41f8d915b09fc278f}
+      \strng{authornamehash}{839ef1bc5eb8e9a41f8d915b09fc278f}
+      \strng{authorfullhash}{6a2edf65eeddc375827b996d8c4dd5ed}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Meteorology and Climatology}
+      \field{number}{7}
+      \field{title}{The Anatomy and Physics of ZDR Columns: Investigating a Polarimetric Radar Signature with a Spectral Bin Microphysical Model}
+      \field{volume}{53}
+      \field{year}{2014}
+      \field{pages}{1820\bibrangedash 1843}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1175/JAMC-D-13-0354.1
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/apme/53/7/jamc-d-13-0354.1.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/apme/53/7/jamc-d-13-0354.1.xml
+      \endverb
+    \endentry
+    \entry{yau1996short}{book}{}
+      \name{author}{2}{}{%
+        {{hash=da35b894120af996125369b7a81284e6}{%
+           family={Yau},
+           familyi={Y\bibinitperiod},
+           given={Man\bibnamedelima Kong},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=30cc4761d4e282f29ef00eecc61401b4}{%
+           family={Rogers},
+           familyi={R\bibinitperiod},
+           given={Roddy\bibnamedelima Rhodes},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{5dcd228916523c1a94d013e173592cba}
+      \strng{fullhash}{5dcd228916523c1a94d013e173592cba}
+      \strng{bibnamehash}{5dcd228916523c1a94d013e173592cba}
+      \strng{authorbibnamehash}{5dcd228916523c1a94d013e173592cba}
+      \strng{authornamehash}{5dcd228916523c1a94d013e173592cba}
+      \strng{authorfullhash}{5dcd228916523c1a94d013e173592cba}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A short course in cloud physics}
+      \field{year}{1996}
+    \endentry
+    \entry{fukao2014radar}{book}{}
+      \name{author}{3}{}{%
+        {{hash=8b3b12aaa2104d5eb4b97f80121afec8}{%
+           family={Fukao},
+           familyi={F\bibinitperiod},
+           given={Shoichiro},
+           giveni={S\bibinitperiod}}}%
+        {{hash=73a084b773039885eb7b46942f388f53}{%
+           family={Hamazu},
+           familyi={H\bibinitperiod},
+           given={Kyosuke},
+           giveni={K\bibinitperiod}}}%
+        {{hash=80def43e5c5319002bb88c9f2e98043a}{%
+           family={Doviak},
+           familyi={D\bibinitperiod},
+           given={Richard\bibnamedelima J},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{dddce72eb0e86ab4ebedd872d2db63de}
+      \strng{fullhash}{dddce72eb0e86ab4ebedd872d2db63de}
+      \strng{bibnamehash}{dddce72eb0e86ab4ebedd872d2db63de}
+      \strng{authorbibnamehash}{dddce72eb0e86ab4ebedd872d2db63de}
+      \strng{authornamehash}{dddce72eb0e86ab4ebedd872d2db63de}
+      \strng{authorfullhash}{dddce72eb0e86ab4ebedd872d2db63de}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Radar for meteorological and atmospheric observations}
+      \field{year}{2014}
+    \endentry
+    \entry{radarqualitycontrol}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=22cda606edf6d84fd20317a0e1f2c16f}{%
+           family={{Deutscher Wetterdienst}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{22cda606edf6d84fd20317a0e1f2c16f}
+      \strng{fullhash}{22cda606edf6d84fd20317a0e1f2c16f}
+      \strng{bibnamehash}{22cda606edf6d84fd20317a0e1f2c16f}
+      \strng{authorbibnamehash}{22cda606edf6d84fd20317a0e1f2c16f}
+      \strng{authornamehash}{22cda606edf6d84fd20317a0e1f2c16f}
+      \strng{authorfullhash}{22cda606edf6d84fd20317a0e1f2c16f}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wetter und Klima - Deutscher Wetterdienst - Radar Data Quality Control}
+      \field{title}{Radar Data Quality Control}
+      \field{urlday}{21}
+      \field{urlmonth}{5}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dwd.de/EN/research/weatherforecasting/met_applications/radar_data_applications/radar_data_quality_control_node.html
+      \endverb
+      \verb{url}
+      \verb https://www.dwd.de/EN/research/weatherforecasting/met_applications/radar_data_applications/radar_data_quality_control_node.html
+      \endverb
+    \endentry
+    \entry{Bringi2001}{book}{}
+      \name{author}{2}{}{%
+        {{hash=f558f730e07aa34362bd590f4dded4c3}{%
+           family={Bringi},
+           familyi={B\bibinitperiod},
+           given={V.\bibnamedelimi N.},
+           giveni={V\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=6af82bff75aa5a80d4ca08a60452b5b8}{%
+           family={Chandrasekar},
+           familyi={C\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{4a3e6a12b129087141050cd14c9f5e34}
+      \strng{fullhash}{4a3e6a12b129087141050cd14c9f5e34}
+      \strng{bibnamehash}{4a3e6a12b129087141050cd14c9f5e34}
+      \strng{authorbibnamehash}{4a3e6a12b129087141050cd14c9f5e34}
+      \strng{authornamehash}{4a3e6a12b129087141050cd14c9f5e34}
+      \strng{authorfullhash}{4a3e6a12b129087141050cd14c9f5e34}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{Polarimetric Doppler Weather Radar}
+      \field{year}{2001}
+      \verb{doi}
+      \verb 10.1017/cbo9780511541094
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1017/cbo9780511541094
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1017/cbo9780511541094
+      \endverb
+    \endentry
+    \entry{kumjian2013principles}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7befc995439e8b916ddc51a2d6a50504}{%
+           family={Kumjian},
+           familyi={K\bibinitperiod},
+           given={MATTHEW\bibnamedelima R},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{7befc995439e8b916ddc51a2d6a50504}
+      \strng{fullhash}{7befc995439e8b916ddc51a2d6a50504}
+      \strng{bibnamehash}{7befc995439e8b916ddc51a2d6a50504}
+      \strng{authorbibnamehash}{7befc995439e8b916ddc51a2d6a50504}
+      \strng{authornamehash}{7befc995439e8b916ddc51a2d6a50504}
+      \strng{authorfullhash}{7befc995439e8b916ddc51a2d6a50504}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Operational Meteorology}
+      \field{title}{Principles and Applications of Dual-Polarization Weather Radar. Part I: Description of the Polarimetric Radar Variables.}
+      \field{volume}{1}
+      \field{year}{2013}
+    \endentry
+    \entry{meischner2005weather}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f5ec46d680358f5efe921ad7c824d1e2}{%
+           family={Meischner},
+           familyi={M\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{f5ec46d680358f5efe921ad7c824d1e2}
+      \strng{fullhash}{f5ec46d680358f5efe921ad7c824d1e2}
+      \strng{bibnamehash}{f5ec46d680358f5efe921ad7c824d1e2}
+      \strng{authorbibnamehash}{f5ec46d680358f5efe921ad7c824d1e2}
+      \strng{authornamehash}{f5ec46d680358f5efe921ad7c824d1e2}
+      \strng{authorfullhash}{f5ec46d680358f5efe921ad7c824d1e2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Weather radar: principles and advanced applications}
+      \field{year}{2005}
+    \endentry
+    \entry{strakaHydrometeorClassification}{article}{}
+      \name{author}{3}{}{%
+        {{hash=fee7712ebed91112b122d64f89095411}{%
+           family={Straka},
+           familyi={S\bibinitperiod},
+           given={Jerry\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3eb564cdc74f40eb4c40cf2ce378d1ef}{%
+           family={Zrnić},
+           familyi={Z\bibinitperiod},
+           given={Dusan\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=7875c992752e844672776e3cc6722e74}{%
+           family={Ryzhkov},
+           familyi={R\bibinitperiod},
+           given={Alexander\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{4b00de572c7b252d46b95413b2dd8858}
+      \strng{fullhash}{4b00de572c7b252d46b95413b2dd8858}
+      \strng{bibnamehash}{4b00de572c7b252d46b95413b2dd8858}
+      \strng{authorbibnamehash}{4b00de572c7b252d46b95413b2dd8858}
+      \strng{authornamehash}{4b00de572c7b252d46b95413b2dd8858}
+      \strng{authorfullhash}{4b00de572c7b252d46b95413b2dd8858}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Meteorology}
+      \field{number}{8}
+      \field{title}{Bulk Hydrometeor Classification and Quantification Using Polarimetric Radar Data: Synthesis of Relations}
+      \field{volume}{39}
+      \field{year}{2000}
+      \field{pages}{1341\bibrangedash 1372}
+      \range{pages}{32}
+      \verb{doi}
+      \verb 10.1175/1520-0450(2000)039<1341:BHCAQU>2.0.CO;2
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/apme/39/8/1520-0450_2000_039_1341_bhcaqu_2.0.co_2.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/apme/39/8/1520-0450_2000_039_1341_bhcaqu_2.0.co_2.xml
+      \endverb
+    \endentry
+    \entry{ryzhkovRadarPolarim}{book}{}
+      \name{author}{2}{}{%
+        {{hash=7875c992752e844672776e3cc6722e74}{%
+           family={Ryzhkov},
+           familyi={R\bibinitperiod},
+           given={Alexander\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=6a1ee59272d3872d54f1d80fb1080b2f}{%
+           family={Zrnic},
+           familyi={Z\bibinitperiod},
+           given={Dusan\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{6d745fec209b986bfbf4a497d589a401}
+      \strng{fullhash}{6d745fec209b986bfbf4a497d589a401}
+      \strng{bibnamehash}{6d745fec209b986bfbf4a497d589a401}
+      \strng{authorbibnamehash}{6d745fec209b986bfbf4a497d589a401}
+      \strng{authornamehash}{6d745fec209b986bfbf4a497d589a401}
+      \strng{authorfullhash}{6d745fec209b986bfbf4a497d589a401}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Radar Polarimetry for Weather Observations}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1007/978-3-030-05093-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-030-05093-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-030-05093-1
+      \endverb
+    \endentry
+    \entry{bringiAttenuation}{article}{}
+      \name{author}{4}{}{%
+        {{hash=f558f730e07aa34362bd590f4dded4c3}{%
+           family={Bringi},
+           familyi={B\bibinitperiod},
+           given={V.\bibnamedelimi N.},
+           giveni={V\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=6af82bff75aa5a80d4ca08a60452b5b8}{%
+           family={Chandrasekar},
+           familyi={C\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=f775f6b5b6a3348f3f5ab0a994fdb58b}{%
+           family={Balakrishnan},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=ee9acd7d8e86940aeaef1471fdbc5aa4}{%
+           family={Zrnić},
+           familyi={Z\bibinitperiod},
+           given={D.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{320881a7f61fafdd49f8cbf3c5b7aa48}
+      \strng{fullhash}{eb57216883058b51de1ba97ce7c242f7}
+      \strng{bibnamehash}{320881a7f61fafdd49f8cbf3c5b7aa48}
+      \strng{authorbibnamehash}{320881a7f61fafdd49f8cbf3c5b7aa48}
+      \strng{authornamehash}{320881a7f61fafdd49f8cbf3c5b7aa48}
+      \strng{authorfullhash}{eb57216883058b51de1ba97ce7c242f7}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Atmospheric and Oceanic Technology}
+      \field{number}{6}
+      \field{title}{An Examination of Propagation Effects in Rainfall on Radar Measurements at Microwave Frequencies}
+      \field{volume}{7}
+      \field{year}{1990}
+      \field{pages}{829\bibrangedash 840}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1175/1520-0426(1990)007<0829:AEOPEI>2.0.CO;2
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/atot/7/6/1520-0426_1990_007_0829_aeopei_2_0_co_2.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/atot/7/6/1520-0426_1990_007_0829_aeopei_2_0_co_2.xml
+      \endverb
+    \endentry
+    \entry{ryzhkovAttenuation}{article}{}
+      \name{author}{4}{}{%
+        {{hash=17b660e45f948244eace8f053ac74682}{%
+           family={Ryzhkov},
+           familyi={R\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5a632794a83c3e452bd864270f2f2154}{%
+           family={Diederich},
+           familyi={D\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8139bad61e635eae85ffadb7c124bb9d}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Pengfei},
+           giveni={P\bibinitperiod}}}%
+        {{hash=2d8aa3a0e7f9e0c3b577d60a3dfc2648}{%
+           family={Simmer},
+           familyi={S\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{b456a1e2acc836c6a5e46cf6f524c709}
+      \strng{fullhash}{85127a5817fc601de897bc7d6fb33f1e}
+      \strng{bibnamehash}{b456a1e2acc836c6a5e46cf6f524c709}
+      \strng{authorbibnamehash}{b456a1e2acc836c6a5e46cf6f524c709}
+      \strng{authornamehash}{b456a1e2acc836c6a5e46cf6f524c709}
+      \strng{authorfullhash}{85127a5817fc601de897bc7d6fb33f1e}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Atmospheric and Oceanic Technology}
+      \field{number}{3}
+      \field{title}{Potential Utilization of Specific Attenuation for Rainfall Estimation, Mitigation of Partial Beam Blockage, and Radar Networking}
+      \field{volume}{31}
+      \field{year}{2014}
+      \field{pages}{599\bibrangedash 619}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1175/JTECH-D-13-00038.1
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/atot/31/3/jtech-d-13-00038_1.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/atot/31/3/jtech-d-13-00038_1.xml
+      \endverb
+    \endentry
+    \entry{snyder}{article}{}
+      \name{author}{5}{}{%
+        {{hash=2c25ffabd90b5a02c831c5bf582fe40c}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={Jeffrey\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=7875c992752e844672776e3cc6722e74}{%
+           family={Ryzhkov},
+           familyi={R\bibinitperiod},
+           given={Alexander\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=ca33d16b8e71cf7d78378b5e998c462b}{%
+           family={Kumjian},
+           familyi={K\bibinitperiod},
+           given={Matthew\bibnamedelima R.},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=249b60b392b8182a79d6b8f95a0a8ac0}{%
+           family={Khain},
+           familyi={K\bibinitperiod},
+           given={Alexander\bibnamedelima P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=7c13dda971c1dafd69399501ddf46f56}{%
+           family={Picca},
+           familyi={P\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{fullhash}{646d434ba93c5921282c71be26d68b2e}
+      \strng{bibnamehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{authorbibnamehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{authornamehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{authorfullhash}{646d434ba93c5921282c71be26d68b2e}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Weather and Forecasting}
+      \field{number}{6}
+      \field{title}{A \zdr-Column Detection Algorithm to Examine Convective Storm Updrafts}
+      \field{volume}{30}
+      \field{year}{2015}
+      \field{pages}{1819\bibrangedash 1844}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1175/WAF-D-15-0068.1
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/wefo/30/6/waf-d-15-0068_1.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/wefo/30/6/waf-d-15-0068_1.xml
+      \endverb
+    \endentry
+    \entry{snyderZDRSimulations}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2c25ffabd90b5a02c831c5bf582fe40c}{%
+           family={Snyder},
+           familyi={S\bibinitperiod},
+           given={Jeffrey\bibnamedelima C.},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e086dd80055e86bc124ffc8a98c0949a}{%
+           family={Bluestein},
+           familyi={B\bibinitperiod},
+           given={Howard\bibnamedelima B.},
+           giveni={H\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=18ebb023fdc92a6b50e31a82ce144143}{%
+           family={II},
+           familyi={I\bibinitperiod},
+           given={Daniel\bibnamedelimb T.\bibnamedelimi Dawson},
+           giveni={D\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=c0ff231b6e6d72d17d3d48a90a79a8f9}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Youngsun},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{fullhash}{f1b9da1dc9f9b688db9851efc90d8178}
+      \strng{bibnamehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{authorbibnamehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{authornamehash}{f43ed2a988ffd3375063e2a81e3c2bd3}
+      \strng{authorfullhash}{f1b9da1dc9f9b688db9851efc90d8178}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Meteorology and Climatology}
+      \field{number}{7}
+      \field{title}{Simulations of Polarimetric, X-Band Radar Signatures in Supercells. Part II: ZDR Columns and Rings and KDP Columns}
+      \field{volume}{56}
+      \field{year}{2017}
+      \field{pages}{2001\bibrangedash 2026}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1175/JAMC-D-16-0139.1
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/apme/56/7/jamc-d-16-0139.1.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/apme/56/7/jamc-d-16-0139.1.xml
+      \endverb
+    \endentry
+    \entry{scharfenbergZDRApplication}{article}{}
+      \name{author}{10}{}{%
+        {{hash=5dcb2a00c51cf59a27838fd1dd6fa1c4}{%
+           family={Scharfenberg},
+           familyi={S\bibinitperiod},
+           given={Kevin\bibnamedelima A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=a9916fff50300d2e4f108a903087255b}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1c0fe5fa36d8dfdd276e4550b8cc87c5}{%
+           family={Schuur},
+           familyi={S\bibinitperiod},
+           given={Terry\bibnamedelima J.},
+           giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=7599944bebc7842c27360f0d2dddcd81}{%
+           family={Schlatter},
+           familyi={S\bibinitperiod},
+           given={Paul\bibnamedelima T.},
+           giveni={P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=637b9116ffe03b58e46bc039cf113e4d}{%
+           family={Giangrande},
+           familyi={G\bibinitperiod},
+           given={Scott\bibnamedelima E.},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=4998f03aa32a10347b90700acba255d7}{%
+           family={Melnikov},
+           familyi={M\bibinitperiod},
+           given={Valery\bibnamedelima M.},
+           giveni={V\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=55b2893d801ab3d6bfcb824206ab6f18}{%
+           family={Burgess},
+           familyi={B\bibinitperiod},
+           given={Donald\bibnamedelima W.},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=be48471917efe96d0081ed66e1cb13c5}{%
+           family={Andra},
+           familyi={A\bibinitperiod},
+           given={David\bibnamedelima L.},
+           giveni={D\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=d5595c4558b160f2181028167794e258}{%
+           family={Foster},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima P.},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=7537e022244b24980208e08b6991e77e}{%
+           family={Krause},
+           familyi={K\bibinitperiod},
+           given={John\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{b2e1722ae64087f767d7d2269a2c27f9}
+      \strng{fullhash}{04e078dd55c96957bcdbc488f3931a31}
+      \strng{bibnamehash}{b2e1722ae64087f767d7d2269a2c27f9}
+      \strng{authorbibnamehash}{b2e1722ae64087f767d7d2269a2c27f9}
+      \strng{authornamehash}{b2e1722ae64087f767d7d2269a2c27f9}
+      \strng{authorfullhash}{04e078dd55c96957bcdbc488f3931a31}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Weather and Forecasting}
+      \field{number}{5}
+      \field{title}{The Joint Polarization Experiment: Polarimetric Radar in Forecasting and Warning Decision Making}
+      \field{volume}{20}
+      \field{year}{2005}
+      \field{pages}{775\bibrangedash 788}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1175/WAF881.1
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/wefo/20/5/waf881_1.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/wefo/20/5/waf881_1.xml
+      \endverb
+    \endentry
+    \entry{wang2017guidelines}{article}{}
+      \name{author}{9}{}{%
+        {{hash=61ad10c626e1d641e0b1d7b5f48d3233}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Y},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=aa460949e52d671dc1c813cfe58b8e78}{%
+           family={Coning},
+           familyi={C\bibinitperiod},
+           given={ED},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d0c3aa15607b0b03827adbe3a36a184c}{%
+           family={Harou},
+           familyi={H\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=af7cc9c3465924051e1b3bed1f9df05a}{%
+           family={Jacobs},
+           familyi={J\bibinitperiod},
+           given={W},
+           giveni={W\bibinitperiod}}}%
+        {{hash=88b836c0d9c82ecd11e454c9356eb2f4}{%
+           family={Joe},
+           familyi={J\bibinitperiod},
+           given={P},
+           giveni={P\bibinitperiod}}}%
+        {{hash=75ad365c5f17c2216eb04e33069123c7}{%
+           family={Nikitina},
+           familyi={N\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod}}}%
+        {{hash=8430e63534ac3d52b60e7b721a09fd9e}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+        {{hash=3702f1c146e64a6c91fc47b81ea59fc7}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=29671919caaa69837adef041db17a906}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a173ffd7d2f7a3e749ffa08afcdc6031}
+      \strng{fullhash}{c1fbc0e0792b20404c22dbeee264dee1}
+      \strng{bibnamehash}{a173ffd7d2f7a3e749ffa08afcdc6031}
+      \strng{authorbibnamehash}{a173ffd7d2f7a3e749ffa08afcdc6031}
+      \strng{authornamehash}{a173ffd7d2f7a3e749ffa08afcdc6031}
+      \strng{authorfullhash}{c1fbc0e0792b20404c22dbeee264dee1}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{WMO publication, published online: https://library. wmo. int/opac/doc\_num. php}
+      \field{title}{Guidelines for nowcasting techniques}
+      \field{year}{2017}
+    \endentry
+    \entry{Rosenfeld2003}{incollection}{}
+      \name{author}{2}{}{%
+        {{hash=95703b548cbd9708e5d253aa5266cdf7}{%
+           family={Rosenfeld},
+           familyi={R\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=51e267e7b824d582a3dbfab84930fe4a}{%
+           family={Ulbrich},
+           familyi={U\bibinitperiod},
+           given={Carlton\bibnamedelima W.},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{6256ad449c6a395d1bf9739bfe5f90cd}
+      \strng{fullhash}{6256ad449c6a395d1bf9739bfe5f90cd}
+      \strng{bibnamehash}{6256ad449c6a395d1bf9739bfe5f90cd}
+      \strng{authorbibnamehash}{6256ad449c6a395d1bf9739bfe5f90cd}
+      \strng{authornamehash}{6256ad449c6a395d1bf9739bfe5f90cd}
+      \strng{authorfullhash}{6256ad449c6a395d1bf9739bfe5f90cd}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Radar and Atmospheric Science: A Collection of Essays in Honor of David Atlas}
+      \field{title}{Cloud Microphysical Properties, Processes, and Rainfall Estimation Opportunities}
+      \field{year}{2003}
+      \field{pages}{237\bibrangedash 258}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/978-1-878220-36-3_10
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-878220-36-3_10
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-878220-36-3_10
+      \endverb
+    \endentry
+    \entry{qpn_sprog}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6005d719065eae66c23e002e1985572a}{%
+           family={Seed},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Boston MA, USA}%
+      }
+      \list{publisher}{1}{%
+        {American Meteorological Society}%
+      }
+      \strng{namehash}{6005d719065eae66c23e002e1985572a}
+      \strng{fullhash}{6005d719065eae66c23e002e1985572a}
+      \strng{bibnamehash}{6005d719065eae66c23e002e1985572a}
+      \strng{authorbibnamehash}{6005d719065eae66c23e002e1985572a}
+      \strng{authornamehash}{6005d719065eae66c23e002e1985572a}
+      \strng{authorfullhash}{6005d719065eae66c23e002e1985572a}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Meteorology}
+      \field{number}{3}
+      \field{title}{A Dynamic and Spatial Scaling Approach to Advection Forecasting}
+      \field{volume}{42}
+      \field{year}{2003}
+      \field{pages}{381\bibrangedash 388}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1175/1520-0450(2003)042<0381:ADASSA>2.0.CO;2
+      \endverb
+      \verb{urlraw}
+      \verb https://journals.ametsoc.org/view/journals/apme/42/3/1520-0450_2003_042_0381_adassa_2.0.co_2.xml
+      \endverb
+      \verb{url}
+      \verb https://journals.ametsoc.org/view/journals/apme/42/3/1520-0450_2003_042_0381_adassa_2.0.co_2.xml
+      \endverb
+    \endentry
+    \entry{scanstrategy}{online}{}
+      \name{author}{1}{}{%
+        {{hash=df01f655fe9bf432b9f52a7a2880dd0b}{%
+           family={DWD},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{fullhash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{bibnamehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{authorbibnamehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{authornamehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{authorfullhash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Radar-Scan-Strategy}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dwd.de/EN/research/observing_atmosphere/weather_radar/weather_radar_scanning.png?__blob=poster&v=3
+      \endverb
+      \verb{url}
+      \verb https://www.dwd.de/EN/research/observing_atmosphere/weather_radar/weather_radar_scanning.png?__blob=poster&v=3
+      \endverb
+    \endentry
+    \entry{helmert2014dwds}{inproceedings}{}
+      \name{author}{10}{}{%
+        {{hash=e0998fc4fa0b4c64a4b9a80c8381fb4c}{%
+           family={Helmert},
+           familyi={H\bibinitperiod},
+           given={Kathleen},
+           giveni={K\bibinitperiod}}}%
+        {{hash=3a18eba9805261fcc5db92f7d14517fa}{%
+           family={Tracksdorf},
+           familyi={T\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c56fd21b0a794de61a9a154114a7ce39}{%
+           family={Steinert},
+           familyi={S\bibinitperiod},
+           given={J{ö}rg},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d6afe5bf37c1618d9a8ca03568487ff6}{%
+           family={Werner},
+           familyi={W\bibinitperiod},
+           given={Manuel},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bf7ba75b615e8feb616c0e6e06e40404}{%
+           family={Frech},
+           familyi={F\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8d2310f9f4ef394b88fb0f194ebe9680}{%
+           family={Rathmann},
+           familyi={R\bibinitperiod},
+           given={Nils},
+           giveni={N\bibinitperiod}}}%
+        {{hash=bb8cad136cda79fd7b171c3d1b9301d7}{%
+           family={Hengstebeck},
+           familyi={H\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9845333b59ab77194bb1c1f73481e54b}{%
+           family={Mott},
+           familyi={M\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=475424b3b5d5ec1a829d5452b1062559}{%
+           family={Schumann},
+           familyi={S\bibinitperiod},
+           given={Sybille},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f100ad26a413f2ae3396c3518e1e0283}{%
+           family={Mammen},
+           familyi={M\bibinitperiod},
+           given={Theodor},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e2dc2c6da4140b699ade08286e6f296}
+      \strng{fullhash}{341ca91cdf2fd04ec695cc0e7c7e4932}
+      \strng{bibnamehash}{4e2dc2c6da4140b699ade08286e6f296}
+      \strng{authorbibnamehash}{4e2dc2c6da4140b699ade08286e6f296}
+      \strng{authornamehash}{4e2dc2c6da4140b699ade08286e6f296}
+      \strng{authorfullhash}{341ca91cdf2fd04ec695cc0e7c7e4932}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proc. Eighth European Conf. on Radar in Meteorology and Hydrology (ERAD 2014), Garmisch-Partenkirchen, Germany, DWD and DLR}
+      \field{title}{DWDs new radar network and post-processing algorithm chain}
+      \field{volume}{4}
+      \field{year}{2014}
+    \endentry
+    \entry{unwetter_bonn}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=184cf32f7a8d066ebe2a756a94bdbad3}{%
+           family={{DER WESTEN}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{184cf32f7a8d066ebe2a756a94bdbad3}
+      \strng{fullhash}{184cf32f7a8d066ebe2a756a94bdbad3}
+      \strng{bibnamehash}{184cf32f7a8d066ebe2a756a94bdbad3}
+      \strng{authorbibnamehash}{184cf32f7a8d066ebe2a756a94bdbad3}
+      \strng{authornamehash}{184cf32f7a8d066ebe2a756a94bdbad3}
+      \strng{authorfullhash}{184cf32f7a8d066ebe2a756a94bdbad3}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{6}
+      \field{title}{Unwetter trifft Bonner Süden: Straßen und Keller überflutet}
+      \field{urlday}{12}
+      \field{urlmonth}{5}
+      \field{urlyear}{2021}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.derwesten.de/region/unwetter-trifft-bonner-sueden-strassen-und-keller-ueberflutet-id11886393.html
+      \endverb
+      \verb{url}
+      \verb https://www.derwesten.de/region/unwetter-trifft-bonner-sueden-strassen-und-keller-ueberflutet-id11886393.html
+      \endverb
+    \endentry
+    \entry{unwetter_mehlem}{online}{}
+      \name{author}{1}{}{%
+        {{hash=08515317a08405be577dd94198ef9932}{%
+           family={{Feuerwehr Wachtberg}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{08515317a08405be577dd94198ef9932}
+      \strng{fullhash}{08515317a08405be577dd94198ef9932}
+      \strng{bibnamehash}{08515317a08405be577dd94198ef9932}
+      \strng{authorbibnamehash}{08515317a08405be577dd94198ef9932}
+      \strng{authornamehash}{08515317a08405be577dd94198ef9932}
+      \strng{authorfullhash}{08515317a08405be577dd94198ef9932}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{6}
+      \field{title}{EB 16-044 – 16-183 | 04.06.2016 UNWETTER IN WACHTBERG}
+      \field{urlday}{27}
+      \field{urlmonth}{5}
+      \field{urlyear}{2021}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.feuerwehr-wachtberg.de/eb-16-044-16-183-04062016-unwetter-wachtberg.html
+      \endverb
+      \verb{url}
+      \verb https://www.feuerwehr-wachtberg.de/eb-16-044-16-183-04062016-unwetter-wachtberg.html
+      \endverb
+    \endentry
+    \entry{mari}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=62011392a3ae53110e6c586e60c0a11b}{%
+           family={{Mari Luna Schmidt}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Rheinische Friedrich-Wilhelms-Universität Bonn}%
+      }
+      \strng{namehash}{62011392a3ae53110e6c586e60c0a11b}
+      \strng{fullhash}{62011392a3ae53110e6c586e60c0a11b}
+      \strng{bibnamehash}{62011392a3ae53110e6c586e60c0a11b}
+      \strng{authorbibnamehash}{62011392a3ae53110e6c586e60c0a11b}
+      \strng{authornamehash}{62011392a3ae53110e6c586e60c0a11b}
+      \strng{authorfullhash}{62011392a3ae53110e6c586e60c0a11b}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{10}
+      \field{title}{Improvement of hail detection and nowcasting by synergistic combination of information from polarimetric radar, model predictions, and in-situ observations}
+      \field{type}{phdthesis}
+      \field{volume}{91}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://hdl.handle.net/20.500.11811/8701
+      \endverb
+      \verb{url}
+      \verb http://hdl.handle.net/20.500.11811/8701
+      \endverb
+    \endentry
+    \entry{sounding_dwd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=df01f655fe9bf432b9f52a7a2880dd0b}{%
+           family={DWD},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{fullhash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{bibnamehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{authorbibnamehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{authornamehash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \strng{authorfullhash}{df01f655fe9bf432b9f52a7a2880dd0b}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Radiosondenaufstieg}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.dwd.de/DE/service/lexikon/Functions/glossar.html?nn=103346&lv2=102134&lv3=102172
+      \endverb
+      \verb{url}
+      \verb https://www.dwd.de/DE/service/lexikon/Functions/glossar.html?nn=103346&lv2=102134&lv3=102172
+      \endverb
+    \endentry
+    \entry{sounding}{online}{}
+      \name{author}{1}{}{%
+        {{hash=bbf61082360d8b1a38b9b51ef9a2a850}{%
+           family={{University of Wyoming - Department of Atmospheric Science}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbf61082360d8b1a38b9b51ef9a2a850}
+      \strng{fullhash}{bbf61082360d8b1a38b9b51ef9a2a850}
+      \strng{bibnamehash}{bbf61082360d8b1a38b9b51ef9a2a850}
+      \strng{authorbibnamehash}{bbf61082360d8b1a38b9b51ef9a2a850}
+      \strng{authornamehash}{bbf61082360d8b1a38b9b51ef9a2a850}
+      \strng{authorfullhash}{bbf61082360d8b1a38b9b51ef9a2a850}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Atmospheric Sounding}
+      \field{urlday}{28}
+      \field{urlmonth}{5}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://weather.uwyo.edu/upperair/sounding.html
+      \endverb
+      \verb{url}
+      \verb http://weather.uwyo.edu/upperair/sounding.html
+      \endverb
+    \endentry
+    \entry{wradlib}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c7db13c8aa80116a02fc3dd93bd5826a}{%
+           family={Heistermann},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a4a991ae14961a7401a6f46c371bcbf8}{%
+           family={Jacobi},
+           familyi={J\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=acbb7c5952ff629185dedd430e396fe2}{%
+           family={Pfaff},
+           familyi={P\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Copernicus {GmbH}}%
+      }
+      \strng{namehash}{0ddf88953075f08eb395efba7d248dff}
+      \strng{fullhash}{0ddf88953075f08eb395efba7d248dff}
+      \strng{bibnamehash}{0ddf88953075f08eb395efba7d248dff}
+      \strng{authorbibnamehash}{0ddf88953075f08eb395efba7d248dff}
+      \strng{authornamehash}{0ddf88953075f08eb395efba7d248dff}
+      \strng{authorfullhash}{0ddf88953075f08eb395efba7d248dff}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Hydrology and Earth System Sciences}
+      \field{number}{2}
+      \field{title}{Technical Note: An open source library for processing weather radar data (\emph{wradlib})}
+      \field{volume}{17}
+      \field{year}{2013}
+      \field{pages}{863\bibrangedash 871}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.5194/hess-17-863-2013
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.5194/hess-17-863-2013
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.5194/hess-17-863-2013
+      \endverb
+    \endentry
+    \entry{dbscan}{inproceedings}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{4}{}{%
+        {{hash=2c062e64ed26aacc08a62155e7944f04}{%
+           family={Ester},
+           familyi={E\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9559fe65ed2c0877cf14a66fe1f8e9b3}{%
+           family={Kriegel},
+           familyi={K\bibinitperiod},
+           given={Hans-Peter},
+           giveni={H\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=802157026f850823b2027c2100cb359a}{%
+           family={Sander},
+           familyi={S\bibinitperiod},
+           given={J{ö}rg},
+           giveni={J\bibinitperiod}}}%
+        {{hash=2dda16c0a5d50fc830d0d4a3787937fa}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Xiaowei},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{fullhash}{77089c60a08eb43e856376e88849121a}
+      \strng{bibnamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authorbibnamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authornamehash}{9158a41d23cb4e154e78366d59c05728}
+      \strng{authorfullhash}{77089c60a08eb43e856376e88849121a}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Kdd}
+      \field{number}{34}
+      \field{title}{A density-based algorithm for discovering clusters in large spatial databases with noise.}
+      \field{volume}{96}
+      \field{year}{1996}
+      \field{pages}{226\bibrangedash 231}
+      \range{pages}{6}
+    \endentry
+    \entry{zdr-tracking}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=e30aa942ff5e0540313c5a536b5d04b6}{%
+           family={Saunders},
+           familyi={S\bibinitperiod},
+           given={Patrick\bibnamedelima Evan},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Purdue University}%
+      }
+      \strng{namehash}{e30aa942ff5e0540313c5a536b5d04b6}
+      \strng{fullhash}{e30aa942ff5e0540313c5a536b5d04b6}
+      \strng{bibnamehash}{e30aa942ff5e0540313c5a536b5d04b6}
+      \strng{authorbibnamehash}{e30aa942ff5e0540313c5a536b5d04b6}
+      \strng{authornamehash}{e30aa942ff5e0540313c5a536b5d04b6}
+      \strng{authorfullhash}{e30aa942ff5e0540313c5a536b5d04b6}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Objective Identification and Tracking of Z DR Columns in X-band Radar Observations}
+      \field{year}{2018}
+    \endentry
+    \entry{pysteps}{article}{}
+      \name{author}{7}{}{%
+        {{hash=7e8a00a99eea2c142c0dd67c9f04d4f4}{%
+           family={Pulkkinen},
+           familyi={P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=2f4831af6b9ec78eaf98ecb0767b16e7}{%
+           family={Nerini},
+           familyi={N\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=2f697eace63403a957b3d580030e1b33}{%
+           family={Pérez\bibnamedelima Hortal},
+           familyi={P\bibinitperiod\bibinitdelim H\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=f681603e6b068f0ba27ec5bd47295d71}{%
+           family={Velasco-Forero},
+           familyi={V\bibinithyphendelim F\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+        {{hash=f8de9070f3fc56525336cd3a53e35c5d}{%
+           family={Seed},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9d62087dda364869b565659ebb393338}{%
+           family={Germann},
+           familyi={G\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=11f9a06fda45f82486c54700b66deb7a}{%
+           family={Foresti},
+           familyi={F\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab46db26d2f78ba9884d06d20407099f}
+      \strng{fullhash}{843902f80d922560eb34c9646705e260}
+      \strng{bibnamehash}{ab46db26d2f78ba9884d06d20407099f}
+      \strng{authorbibnamehash}{ab46db26d2f78ba9884d06d20407099f}
+      \strng{authornamehash}{ab46db26d2f78ba9884d06d20407099f}
+      \strng{authorfullhash}{843902f80d922560eb34c9646705e260}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Geoscientific Model Development}
+      \field{number}{10}
+      \field{title}{Pysteps: an open-source Python library for probabilistic precipitation nowcasting (v1.0)}
+      \field{volume}{12}
+      \field{year}{2019}
+      \field{pages}{4185\bibrangedash 4219}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.5194/gmd-12-4185-2019
+      \endverb
+      \verb{urlraw}
+      \verb https://gmd.copernicus.org/articles/12/4185/2019/
+      \endverb
+      \verb{url}
+      \verb https://gmd.copernicus.org/articles/12/4185/2019/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
